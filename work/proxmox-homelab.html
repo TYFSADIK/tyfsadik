@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxmox Homelab + Wikipedia Mirror Server - TYF Sadik</title>
+    <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+    <meta name="title" content="Proxmox Homelab + Wikipedia Mirror Server - kubre.in">
+    <meta name="description" content="Proxmox-based virtualization homelab with self-updating offline Wikipedia mirror for research and educational use.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tyfsadik.com/projects/proxmox-homelab/">
+    <meta property="og:title" content="Proxmox Homelab + Wikipedia Mirror Server - TYF Sadik">
+    <meta property="og:description" content="Proxmox-based virtualization homelab with self-updating offline Wikipedia mirror for research and educational use.">
+    <meta property="og:image" content="https://tyfsadik.com/assets/proxmox-homelab.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.tyfsadik.com/projects/proxmox-homelab/">
+    <meta property="twitter:title" content="Proxmox Homelab + Wikipedia Mirror Server">
+    <meta property="twitter:description" content="Proxmox-based virtualization homelab with self-updating offline Wikipedia mirror for research and educational use.">
+    <meta property="twitter:image" content="https://tyfsadik.com/assets/proxmox-homelab.jpg">
+    <link rel="icon" type="image/jpeg" href="https://www.tyfsadik.com/assets/me.jpg">
+    <link rel="stylesheet" href="../_astro/about.CzspFIqT.css" />
+    <style>
+        @import"https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
+        @font-face{font-family:Departure Neon;src:url(../fonts/DepartureMono-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+        body{--tw-bg-opacity: 1;background-color:rgb(238 238 238 / var(--tw-bg-opacity));font-family:Departure Neon,IBM Plex\ Mono,Source\ Code\ Pro,Consolas,Menlo,monospace;--tw-text-opacity: 1;color:rgb(34 34 34 / var(--tw-text-opacity));font-display:swap}
+        ::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.6);border-radius:10px;background-color:#0000004d}
+        ::-webkit-scrollbar{width:4px;--tw-bg-opacity: 1;background-color:rgb(107 114 128 / var(--tw-bg-opacity))}
+        ::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.3);--tw-bg-opacity: 1;background-color:rgb(209 213 219 / var(--tw-bg-opacity))}
+        ::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}
+        ::selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}
+        .typography{font-family:Inter;font-display:swap}
+        .typography h1{margin-top:1.5rem;margin-bottom:.5rem;font-size:1.25rem;line-height:1.75rem;font-weight:700}
+        .typography h2{margin-top:1.25rem;margin-bottom:.5rem;font-size:1.1rem;line-height:1.5rem;font-weight:600}
+        .typography p{margin-bottom:.75rem;--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}
+        .typography a{text-decoration-line:underline}
+        .typography a:hover{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}
+        .typography img{margin-top:1rem;margin-bottom:1rem;height:auto;width:100%}
+        .typography pre{margin-top:1rem;margin-bottom:1rem;padding:.5rem;background-color:#f5f5f5;border:1px solid #ddd;border-radius:4px;overflow-x:auto;--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}
+        .typography ul{margin-top:1rem;margin-bottom:1rem;list-style-type:disc;padding-left:2rem}
+        .typography ol{margin-top:1rem;margin-bottom:1rem;list-style-type:decimal;padding-left:3rem}
+        .typography li{margin-top:.5rem;margin-bottom:.5rem}
+        .typography li::marker{font-family:Departure Neon,IBM Plex\ Mono,Source\ Code\ Pro,Consolas,Menlo,monospace;--tw-text-opacity: 1;color:rgb(102 102 102 / var(--tw-text-opacity))}
+        .typography blockquote{margin-top:1rem;margin-bottom:1rem;--tw-bg-opacity: 1;background-color:rgb(204 204 204 / var(--tw-bg-opacity));padding:.5rem;--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}
+        .typography table{margin-top:1rem;margin-bottom:1rem;width:100%;border-collapse:collapse}
+        .typography table th{border:1px solid #222;padding:.5rem;background-color:#f0f0f0;font-weight:600}
+        .typography table td{border:1px solid #222;padding:.5rem}
+        .typography table th:last-child,.typography table td:last-child{border-right-width:1px}
+        .typography table tr:nth-child(even){background-color:#f9f9f9}
+    </style>
+</head>
+<body class="max-w-screen-md mx-auto px-4 lg:px-0">
+    <nav class="flex flex-col justify-between pb-2 pt-2 lg:pt-8">
+        <div class="uppercase flex items-center justify-between py-2">
+            <span id="title" class="font-black text-2xl md:text-6xl">█▓▒░ TYF Sadik</span>
+            <a href="../about.html" class="text-carbon ml-auto px-2 absolute -right-5 top-6 md:relative md:top-auto md:right-none pt-[2px] pb-0 text-xs md:text-sm -rotate-90 bg-enamel text-carbon hover:text-enamel hover:bg-carbon transition-colors">⌥ PROD</a>
+        </div>
+        <div class="flex gap-x-2 pt-8">
+            <a class="capitalize px-2 pb-0 pt-[1px] flex items-center justify-center gap-x-2 text-sm md:text-md hover:bg-yellow-400 transition-colors " href="../index.html"> ✦ PROFILE </a>
+            <a class="capitalize px-2 pb-0 pt-[1px] flex items-center justify-center gap-x-2 text-sm md:text-md hover:bg-yellow-400 transition-colors " href="../blog.html"> ¶ BLOG </a>
+            <a class="capitalize px-2 pb-0 pt-[1px] flex items-center justify-center gap-x-2 text-sm md:text-md hover:bg-yellow-400 transition-colors bg-yellow-400 text-black" href="../work.html"> ≥ WORK </a>
+        </div>
+    </nav>
+    
+    <main>
+        <article class="pt-10 typography font-sans">
+            <div class="flex justify-between items-center">
+                <a href="../work.html" class="text-carbon-lighter font-mono hover:bg-yellow-400 hover:text-black transition-colors">← Back</a>
+                <dl>
+                    <dt class="sr-only">Date</dt>
+                    <dd class="whitespace-nowrap not-prose pl-0 leading-6 font-mono text-sm text-carbon-lighter uppercase">
+                        <time datetime="2024-01-01">1 January 2024</time>
+                    </dd>
+                </dl>
+            </div>
+            
+            <h1 class="font-mono uppercase text-2xl text-carbon-lighter">🖥️ Proxmox Homelab + Wikipedia Mirror Server</h1>
+            
+            <figure>
+                <img src="../_astro/proxmox-homelab.jpg" height="299" width="1021" alt="Proxmox Homelab Dashboard" class="w-auto h-auto p-4">
+            </figure>
+            
+            <section>
+                <p>This project showcases my <strong>Proxmox-based virtualization homelab</strong> that hosts multiple services, including a <strong>self-updating offline Wikipedia mirror</strong> for research and educational use. The entire system is <strong>firewalled, modular, and reproducible</strong>, giving me full control over my infrastructure while improving my sysadmin, networking, and virtualization skills.</p>
+            </section>
+            
+            <section>
+                <h1 id="project-highlights">🚀 Project Highlights</h1>
+                
+                <h2 id="proxmox-homelab">✅ Proxmox Homelab</h2>
+                <ul>
+                    <li>Installed Proxmox VE on a dedicated machine for enterprise-grade virtualization</li>
+                    <li>Created <strong>LXC containers</strong> for each service (Wikipedia mirror, web apps, DNS, etc.)</li>
+                    <li>Configured <strong>VMs for testing OS images and network scenarios</strong></li>
+                    <li>Implemented ZFS storage for snapshots and data integrity</li>
+                </ul>
+                
+                <h2 id="wikipedia-mirror-setup">✅ Wikipedia Mirror Setup</h2>
+                <ul>
+                    <li>Deployed a full <strong>offline Wikipedia</strong> using <a href="https://www.kiwix.org/">Kiwix-serve</a></li>
+                    <li>Automated ZIM file downloads and updates with cron jobs</li>
+                    <li>Served content over LAN, accessible by any device on my network</li>
+                    <li>Optimized storage usage with compression and cleanup scripts</li>
+                </ul>
+                
+                <h2 id="networking-security">✅ Networking & Security</h2>
+                <ul>
+                    <li>Configured <strong>VLANs and network segmentation</strong> for service isolation</li>
+                    <li>Implemented <strong>iptables/nftables</strong> firewall rules</li>
+                    <li>Set up <strong>reverse proxy</strong> with Nginx for web services</li>
+                    <li>Blocked external access while maintaining LAN availability</li>
+                </ul>
+                
+                <h2 id="automation-monitoring">✅ Automation & Monitoring</h2>
+                <ul>
+                    <li>Created <strong>Bash scripts</strong> for automated maintenance tasks</li>
+                    <li>Set up <strong>Proxmox backup schedules</strong> for all containers</li>
+                    <li>Configured <strong>resource monitoring</strong> and alerting</li>
+                    <li>Implemented <strong>log rotation</strong> and system health checks</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="tech-stack">🧰 Tech Stack</h1>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Layer</th>
+                            <th>Technologies Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Virtualization</strong></td>
+                            <td>Proxmox VE, LXC Containers, QEMU/KVM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operating Systems</strong></td>
+                            <td>Debian 12, Ubuntu Server, Alpine Linux</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wikipedia Hosting</strong></td>
+                            <td>Kiwix-serve, ZIM file dumps</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Networking</strong></td>
+                            <td>iptables, nftables, VLANs, Nginx reverse proxy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Automation</strong></td>
+                            <td>Bash scripting, cron jobs, Proxmox API</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Storage</strong></td>
+                            <td>ZFS, LVM-Thin, compression, snapshots</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monitoring</strong></td>
+                            <td>Proxmox dashboard, custom resource scripts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section>
+                <h1 id="repository-structure">📂 Repository Structure</h1>
+                
+                <pre><code>proxmox-homelab/
+├── 📄 README.md
+├── 📁 docs/
+│   ├── 01-proxmox-installation.md
+│   ├── 02-container-setup.md
+│   ├── 03-network-configuration.md
+│   ├── 04-wikipedia-mirror.md
+│   ├── 05-security-hardening.md
+│   └── 06-backup-strategy.md
+├── 📁 scripts/
+│   ├── update-wikipedia.sh
+│   ├── container-backup.sh
+│   ├── health-check.sh
+│   └── firewall-setup.sh
+├── 📁 configs/
+│   ├── nginx-reverse-proxy.conf
+│   ├── iptables-rules.v4
+│   └── crontab-jobs.txt
+├── 📁 screenshots/
+│   ├── proxmox-dashboard.png
+│   ├── lxc-containers.png
+│   ├── wikipedia-mirror.png
+│   └── network-diagram.png
+└── 📁 backups/
+    └── README-backups.md</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="system-architecture">🏗️ System Architecture</h1>
+                
+                <pre><code>graph TB
+    A[User Devices] --> B[Firewall/Router]
+    B --> C[Proxmox Host]
+    
+    C --> D[LXC: Wikipedia Mirror]
+    C --> E[LXC: Reverse Proxy]
+    C --> F[LXC: Utility Services]
+    C --> G[VM: Test Environment]
+    
+    D --> H[Kiwix-serve]
+    E --> I[Nginx]
+    F --> J[DNS/DHCP]
+    G --> K[Various OSes]
+    
+    H --> L[ZIM Files]
+    I --> D</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="quick-start">⚡ Quick Start</h1>
+                
+                <h2 id="proxmox-installation">1. Proxmox Installation</h2>
+                <pre><code># Download Proxmox VE ISO and install on bare metal
+# Configure network and storage during installation</code></pre>
+                
+                <h2 id="create-wikipedia-container">2. Create Wikipedia Container</h2>
+                <pre><code># Create LXC container with Debian 12
+pct create 100 debian-12-standard_12.2-1_amd64.tar.zst \
+  --storage local-zfs --rootfs 8G</code></pre>
+                
+                <h2 id="install-kiwix">3. Install Kiwix</h2>
+                <pre><code># Inside container
+wget https://download.kiwix.org/release/kiwix-tools/kiwix-tools_linux-x86_64.tar.gz
+tar xvf kiwix-tools_linux-x86_64.tar.gz
+./kiwix-serve --port=8080 wikipedia_en_all_maxi_2023-11.zim</code></pre>
+                
+                <h2 id="network-configuration">4. Network Configuration</h2>
+                <pre><code># Configure bridge and VLANs in /etc/network/interfaces
+auto vmbr0
+iface vmbr0 inet static
+    address 192.168.1.10/24
+    gateway 192.168.1.1
+    bridge-ports eno1
+    bridge-stp off
+    bridge-fd 0</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="key-scripts">🔧 Key Scripts</h1>
+                
+                <h2 id="automated-wikipedia-updates">Automated Wikipedia Updates (scripts/update-wikipedia.sh)</h2>
+                <pre><code>#!/bin/bash
+# Downloads latest Wikipedia ZIM and updates service
+
+ZIM_URL="https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_maxi_$(date +%Y-%m).zim"
+cd /storage/zim-files
+wget -c "$ZIM_URL"
+systemctl restart kiwix-serve</code></pre>
+                
+                <h2 id="container-backups">Container Backups (scripts/container-backup.sh)</h2>
+                <pre><code>#!/bin/bash
+# Backs up all LXC containers to NAS
+
+for container in $(pct list | awk 'NR>1 {print $1}'); do
+    vzdump $container --mode snapshot --storage nas-backup
+done</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="security-features">🔐 Security Features</h1>
+                <ul>
+                    <li><strong>Network Isolation</strong>: Services segmented with VLANs</li>
+                    <li><strong>Firewall Rules</strong>: Strict iptables policies allowing only necessary ports</li>
+                    <li><strong>No External Exposure</strong>: Services available on LAN only</li>
+                    <li><strong>Regular Updates</strong>: Automated security patches</li>
+                    <li><strong>Backup Encryption</strong>: Encrypted off-site backups</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="monitoring-maintenance">📊 Monitoring & Maintenance</h1>
+                
+                <h2 id="daily-tasks">Daily Tasks</h2>
+                <ul>
+                    <li>Check container status and resource usage</li>
+                    <li>Verify backup completion</li>
+                    <li>Review security logs</li>
+                </ul>
+                
+                <h2 id="weekly-tasks">Weekly Tasks</h2>
+                <ul>
+                    <li>Update Wikipedia ZIM files</li>
+                    <li>Apply system updates</li>
+                    <li>Clean up old snapshots</li>
+                </ul>
+                
+                <h2 id="monthly-tasks">Monthly Tasks</h2>
+                <ul>
+                    <li>Test disaster recovery procedures</li>
+                    <li>Review and update firewall rules</li>
+                    <li>Performance optimization</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="future-enhancements">🎯 Future Enhancements</h1>
+                <ul>
+                    <li>[ ] <strong>Multi-node Proxmox Cluster</strong> for high availability</li>
+                    <li>[ ] <strong>Prometheus + Grafana</strong> for advanced monitoring</li>
+                    <li>[ ] <strong>Ansible Automation</strong> for configuration management</li>
+                    <li>[ ] <strong>Cloudflare Tunnels</strong> for secure remote access</li>
+                    <li>[ ] <strong>Docker Integration</strong> for application isolation</li>
+                    <li>[ ] <strong>Additional Knowledge Bases</strong> (Kiwix library expansion)</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="contributing">🤝 Contributing</h1>
+                <p>This project is open to suggestions and improvements! Feel free to:</p>
+                <ul>
+                    <li>Submit issues for bugs or feature requests</li>
+                    <li>Fork the repository and create pull requests</li>
+                    <li>Share your own homelab configurations</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="license">📄 License</h1>
+                <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+            </section>
+            
+            <section>
+                <h1 id="acknowledgments">🙌 Acknowledgments</h1>
+                <ul>
+                    <li><a href="https://www.kiwix.org/">Kiwix</a> for making offline knowledge accessible</li>
+                    <li><a href="https://www.proxmox.com/">Proxmox VE</a> for robust virtualization platform</li>
+                    <li>Wikipedia contributors for creating amazing free knowledge resources</li>
+                </ul>
+            </section>
+            
+            <section>
+                <p><strong>⭐ If you find this project helpful, please give it a star on GitHub!</strong></p>
+            </section>
+            
+            <section class="giscus mx-auto my-10 max-w-screen-md">
+                <script src="https://giscus.app/client.js" data-repo="TYFSADIK/tyfsadik" data-repo-id="R_kgDOOk6Jdw" data-category="Announcements" data-category-id="DIC_kwDOOk6Jd84Cpz1k" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="en" crossorigin="anonymous" async></script>
+            </section>
+            
+            <div>
+                <div class="pt-8 pb-4 text-sm" id="contact">
+                    <div class="grid grid-cols-3 text-center lg:grid-cols-6 gap-y-2">
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="mailto:hambahumbu@gmail.com?subject=Hello">Email</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://www.linkedin.com/in/md-taki-yasir-faraji-sadik-63a026278/">LinkedIn</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://github.com/TYFSADIK">GitHub</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://x.com/chill_____guy">&#120143;</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://www.youtube.com/@TYF_SADIK">YouTube</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://www.instagram.com/sadik__actually/">Instagram</a>
+                    </div>
+                </div>
+                
+                <footer class="pt-8 pb-8 px-2 lg:px-0 text-center border-carbon text-xs text-carbon">
+                    &copy; 2018 - 2025, TYF Sadik.<wbr> Creative Commons Attribution 4.0 International License.
+                </footer>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
