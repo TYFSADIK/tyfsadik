@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Hosted SMTP Email Server - TYF Sadik</title>
+    <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+    <meta name="title" content="Self-Hosted SMTP Email Server - tyfsadik.org">
+    <meta name="description" content="Complete production-ready self-hosted SMTP email server implementation for the domain tyfsadik.org">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tyfsadik.com/work/smtp-email-server/">
+    <meta property="og:title" content="Self-Hosted SMTP Email Server - TYF Sadik">
+    <meta property="og:description" content="Complete production-ready self-hosted SMTP email server implementation for the domain tyfsadik.org">
+    <meta property="og:image" content="https://tyfsadik.com/assets/smtp-server.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.tyfsadik.com/work/smtp-email-server/">
+    <meta property="twitter:title" content="Self-Hosted SMTP Email Server">
+    <meta property="twitter:description" content="Complete production-ready self-hosted SMTP email server implementation for the domain tyfsadik.org">
+    <meta property="twitter:image" content="https://tyfsadik.com/assets/smtp-server.jpg">
+    <link rel="icon" type="image/jpeg" href="https://www.tyfsadik.com/assets/me.jpg">
+    <link rel="stylesheet" href="../_astro/about.CzspFIqT.css" />
+    <style>
+        @import"https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
+        @font-face{font-family:Departure Neon;src:url(../fonts/DepartureMono-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+        body{--tw-bg-opacity: 1;background-color:rgb(238 238 238 / var(--tw-bg-opacity));font-family:Departure Neon,IBM Plex\ Mono,Source\ Code\ Pro,Consolas,Menlo,monospace;--tw-text-opacity: 1;color:rgb(34 34 34 / var(--tw-text-opacity));font-display:swap}
+        ::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.6);border-radius:10px;background-color:#0000004d}
+        ::-webkit-scrollbar{width:4px;--tw-bg-opacity: 1;background-color:rgb(107 114 128 / var(--tw-bg-opacity))}
+        ::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.3);--tw-bg-opacity: 1;background-color:rgb(209 213 219 / var(--tw-bg-opacity))}
+        ::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}
+        ::selection{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}
+        .typography{font-family:Inter;font-display:swap}
+        .typography h1{margin-top:1.5rem;margin-bottom:.5rem;font-size:1.25rem;line-height:1.75rem;font-weight:700}
+        .typography h2{margin-top:1.25rem;margin-bottom:.5rem;font-size:1.1rem;line-height:1.5rem;font-weight:600}
+        .typography p{margin-bottom:.75rem;--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}
+        .typography a{text-decoration-line:underline}
+        .typography a:hover{--tw-bg-opacity: 1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}
+        .typography img{margin-top:1rem;margin-bottom:1rem;height:auto;width:100%}
+        .typography pre{margin-top:1rem;margin-bottom:1rem;padding:.5rem;background-color:#f5f5f5;border:1px solid #ddd;border-radius:4px;overflow-x:auto;--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}
+        .typography ul{margin-top:1rem;margin-bottom:1rem;list-style-type:disc;padding-left:2rem}
+        .typography ol{margin-top:1rem;margin-bottom:1rem;list-style-type:decimal;padding-left:3rem}
+        .typography li{margin-top:.5rem;margin-bottom:.5rem}
+        .typography li::marker{font-family:Departure Neon,IBM Plex\ Mono,Source\ Code\ Pro,Consolas,Menlo,monospace;--tw-text-opacity: 1;color:rgb(102 102 102 / var(--tw-text-opacity))}
+        .typography blockquote{margin-top:1rem;margin-bottom:1rem;--tw-bg-opacity: 1;background-color:rgb(204 204 204 / var(--tw-bg-opacity));padding:.5rem;--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity))}
+        .typography table{margin-top:1rem;margin-bottom:1rem;width:100%;border-collapse:collapse}
+        .typography table th{border:1px solid #222;padding:.5rem;background-color:#f0f0f0;font-weight:600}
+        .typography table td{border:1px solid #222;padding:.5rem}
+        .typography table th:last-child,.typography table td:last-child{border-right-width:1px}
+        .typography table tr:nth-child(even){background-color:#f9f9f9}
+        .architecture-img{max-width:100%;height:auto;border:1px solid #ddd;border-radius:4px}
+    </style>
+</head>
+<body class="max-w-screen-md mx-auto px-4 lg:px-0">
+    <nav class="flex flex-col justify-between pb-2 pt-2 lg:pt-8">
+        <div class="uppercase flex items-center justify-between py-2">
+            <span id="title" class="font-black text-2xl md:text-6xl">█▓▒░ TYF Sadik</span>
+            <a href="../about.html" class="text-carbon ml-auto px-2 absolute -right-5 top-6 md:relative md:top-auto md:right-none pt-[2px] pb-0 text-xs md:text-sm -rotate-90 bg-enamel text-carbon hover:text-enamel hover:bg-carbon transition-colors">⌥ PROD</a>
+        </div>
+        <div class="flex gap-x-2 pt-8">
+            <a class="capitalize px-2 pb-0 pt-[1px] flex items-center justify-center gap-x-2 text-sm md:text-md hover:bg-yellow-400 transition-colors " href="../index.html"> ✦ PROFILE </a>
+            <a class="capitalize px-2 pb-0 pt-[1px] flex items-center justify-center gap-x-2 text-sm md:text-md hover:bg-yellow-400 transition-colors " href="../blog.html"> ¶ BLOG </a>
+            <a class="capitalize px-2 pb-0 pt-[1px] flex items-center justify-center gap-x-2 text-sm md:text-md hover:bg-yellow-400 transition-colors bg-yellow-400 text-black" href="../work.html"> ≥ WORK </a>
+        </div>
+    </nav>
+    
+    <main>
+        <article class="pt-10 typography font-sans">
+            <div class="flex justify-between items-center">
+                <a href="../work.html" class="text-carbon-lighter font-mono hover:bg-yellow-400 hover:text-black transition-colors">← Back</a>
+                <dl>
+                    <dt class="sr-only">Date</dt>
+                    <dd class="whitespace-nowrap not-prose pl-0 leading-6 font-mono text-sm text-carbon-lighter uppercase">
+                        <time datetime="2024-03-15">15 March 2024</time>
+                    </dd>
+                </dl>
+            </div>
+            
+            <h1 class="font-mono uppercase text-2xl text-carbon-lighter">📧 Self-Hosted SMTP Email Server – tyfsadik.org</h1>
+            
+            <figure>
+                <img src="../_astro/smtp-server-architecture.jpg" alt="SMTP Server Architecture" class="architecture-img">
+            </figure>
+            
+            <section>
+                <p>A complete, production-ready <strong>self-hosted SMTP email server</strong> implementation for the domain <strong>tyfsadik.org</strong>. This setup ensures secure, reliable email delivery with enterprise-grade authentication protocols and security measures.</p>
+            </section>
+            
+            <section>
+                <h1 id="quick-start">🚀 Quick Start</h1>
+                
+                <h2 id="prerequisites">Prerequisites</h2>
+                <ul>
+                    <li>Ubuntu 22.04 LTS server</li>
+                    <li>Domain name (tyfsadik.org)</li>
+                    <li>Static IP address</li>
+                    <li>Root access to the server</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="features">✨ Features</h1>
+                <ul>
+                    <li><strong>SMTP Service</strong> - Postfix with TLS/SSL encryption</li>
+                    <li><strong>IMAP/POP3 Service</strong> - Dovecot with Maildir storage</li>
+                    <li><strong>Email Authentication</strong> - SPF, DKIM, DMARC configured</li>
+                    <li><strong>Security</strong> - Fail2ban, UFW firewall, SSL certificates</li>
+                    <li><strong>Spam Protection</strong> - Basic RBL checks and filtering</li>
+                    <li><strong>Reliable Delivery</strong> - Proper DNS configuration and reverse DNS</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="installation-steps">⚙️ Installation Steps</h1>
+                
+                <h2 id="system-preparation">1. System Preparation</h2>
+                <pre><code># Update system and install dependencies
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y postfix dovecot-core dovecot-imapd dovecot-pop3d \
+    openssl opendkim opendkim-tools ufw fail2ban mailutils</code></pre>
+                
+                <h2 id="basic-configuration">2. Basic Configuration</h2>
+                <p><strong>Postfix Main Configuration</strong> (<code>/etc/postfix/main.cf</code>):</p>
+                <pre><code>sudo nano /etc/postfix/main.cf</code></pre>
+                <p>Add/update these settings:</p>
+                <pre><code>myhostname = mail.tyfsadik.org
+mydomain = tyfsadik.org
+myorigin = $mydomain
+inet_interfaces = all
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+home_mailbox = Maildir/
+smtpd_use_tls = yes
+smtpd_tls_cert_file = /etc/ssl/certs/mailserver.crt
+smtpd_tls_key_file = /etc/ssl/private/mailserver.key</code></pre>
+                
+                <h2 id="ssl-certificate-generation">3. SSL Certificate Generation</h2>
+                <pre><code># Create SSL directories
+sudo mkdir -p /etc/ssl/private
+sudo mkdir -p /etc/ssl/certs
+
+# Generate self-signed certificate
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /etc/ssl/private/mailserver.key \
+    -out /etc/ssl/certs/mailserver.crt \
+    -subj "/C=US/ST=State/L=City/O=Organization/CN=mail.tyfsadik.org"</code></pre>
+                
+                <h2 id="dovecot-configuration">4. Dovecot Configuration</h2>
+                <pre><code>sudo nano /etc/dovecot/dovecot.conf</code></pre>
+                <p>Basic configuration:</p>
+                <pre><code>mail_location = maildir:~/Maildir
+protocols = imap pop3
+ssl = yes
+ssl_cert = </etc/ssl/certs/mailserver.crt
+ssl_key = </etc/ssl/private/mailserver.key</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="dns-configuration">🌐 DNS Configuration</h1>
+                
+                <h2 id="essential-dns-records">Essential DNS Records:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A</strong></td>
+                            <td><code>mail.tyfsadik.org</code></td>
+                            <td><code>YOUR_SERVER_IP</code></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MX</strong></td>
+                            <td><code>@</code></td>
+                            <td><code>mail.tyfsadik.org</code></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TXT</strong></td>
+                            <td><code>@</code></td>
+                            <td><code>v=spf1 mx ~all</code></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TXT</strong></td>
+                            <td><code>_dmarc</code></td>
+                            <td><code>v=DMARC1; p=none; rua=mailto:admin@tyfsadik.org</code></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2 id="dkim-setup">DKIM Setup</h2>
+                <pre><code># Install and configure OpenDKIM
+sudo apt install -y opendkim opendkim-tools
+
+# Generate DKIM keys
+sudo mkdir -p /etc/opendkim/keys/tyfsadik.org
+sudo opendkim-genkey -D /etc/opendkim/keys/tyfsadik.org/ -d tyfsadik.org -s mail
+sudo chown opendkim:opendkim /etc/opendkim/keys/tyfsadik.org/mail.private
+
+# View DKIM record for DNS
+sudo cat /etc/opendkim/keys/tyfsadik.org/mail.txt</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="security-configuration">🔒 Security Configuration</h1>
+                
+                <h2 id="firewall-setup">Firewall Setup</h2>
+                <pre><code># Configure UFW firewall
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw allow 25/tcp    # SMTP
+sudo ufw allow 587/tcp   # Submission
+sudo ufw allow 465/tcp   # SMTPS
+sudo ufw allow 993/tcp   # IMAPS
+sudo ufw allow 995/tcp   # POP3S
+sudo ufw enable</code></pre>
+                
+                <h2 id="fail2ban-protection">Fail2ban Protection</h2>
+                <pre><code>sudo nano /etc/fail2ban/jail.local</code></pre>
+                <p>Add these configurations:</p>
+                <pre><code>[postfix]
+enabled = true
+port = smtp,465,submission
+filter = postfix
+logpath = /var/log/mail.log
+maxretry = 3
+bantime = 3600
+
+[dovecot]
+enabled = true
+port = pop3,pop3s,imap,imaps
+filter = dovecot
+logpath = /var/log/mail.log
+maxretry = 3
+bantime = 3600</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="testing-your-setup">🧪 Testing Your Setup</h1>
+                
+                <h2 id="test-smtp-service">Test SMTP Service</h2>
+                <pre><code># Test SMTP connectivity
+telnet mail.tyfsadik.org 25
+
+# Send test email
+echo "Test message from SMTP server" | mail -s "Server Test" your-email@gmail.com</code></pre>
+                
+                <h2 id="verify-dns-records">Verify DNS Records</h2>
+                <pre><code># Check MX record
+dig MX tyfsadik.org +short
+
+# Check SPF record
+dig TXT tyfsadik.org +short
+
+# Check if ports are open
+nmap -p 25,587,465,993,995 mail.tyfsadik.org</code></pre>
+                
+                <h2 id="service-management">Service Management</h2>
+                <pre><code># Restart all services
+sudo systemctl restart postfix dovecot opendkim fail2ban
+
+# Enable on boot
+sudo systemctl enable postfix dovecot opendkim fail2ban
+
+# Check status
+sudo systemctl status postfix dovecot</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="monitoring-maintenance">📊 Monitoring & Maintenance</h1>
+                
+                <h2 id="check-mail-logs">Check Mail Logs</h2>
+                <pre><code># Real-time log monitoring
+sudo tail -f /var/log/mail.log
+
+# Check for errors
+sudo grep -i error /var/log/mail.log
+
+# Monitor mail queue
+mailq</code></pre>
+                
+                <h2 id="backup-script">Backup Script</h2>
+                <pre><code>#!/bin/bash
+# scripts/backup-mail.sh
+
+BACKUP_DIR="/backup/mail-$(date +%Y%m%d)"
+mkdir -p $BACKUP_DIR
+
+# Backup configurations
+cp -r /etc/postfix $BACKUP_DIR/
+cp -r /etc/dovecot $BACKUP_DIR/
+cp -r /etc/opendkim $BACKUP_DIR/
+
+# Backup mail directories
+tar -czf $BACKUP_DIR/maildir.tar.gz /var/mail/
+
+echo "Backup completed: $BACKUP_DIR"</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="troubleshooting-common-issues">🐛 Troubleshooting Common Issues</h1>
+                
+                <h2 id="emails-not-sending">Emails Not Sending</h2>
+                <pre><code># Check Postfix configuration
+sudo postfix check
+sudo postconf -n
+
+# Check if Postfix is running
+sudo systemctl status postfix
+
+# Check mail queue
+sudo mailq</code></pre>
+                
+                <h2 id="authentication-problems">Authentication Problems</h2>
+                <pre><code># Check Dovecot status
+sudo systemctl status dovecot
+
+# Test authentication
+telnet localhost 993
+
+# Check authentication logs
+sudo grep "authentication" /var/log/mail.log</code></pre>
+                
+                <h2 id="dns-issues">DNS Issues</h2>
+                <pre><code># Verify all DNS records
+dig MX tyfsadik.org
+dig A mail.tyfsadik.org
+dig TXT tyfsadik.org
+dig TXT _dmarc.tyfsadik.org</code></pre>
+            </section>
+            
+            <section>
+                <h1 id="support">📞 Support</h1>
+                <ul>
+                    <li><strong>Email</strong>: <a href="mailto:taki@tyfsadik.org">taki@tyfsadik.org</a></li>
+                    <li><strong>Domain</strong>: <a href="https://tyfsadik.org">tyfsadik.org</a></li>
+                </ul>
+            </section>
+            
+            <section>
+                <h1 id="license">📄 License</h1>
+                <p>MIT License - feel free to use this configuration for your own projects.</p>
+            </section>
+            
+            <section>
+                <p><strong>⭐ If this project helped you, please consider giving it a star on GitHub!</strong></p>
+            </section>
+            
+            <section class="giscus mx-auto my-10 max-w-screen-md">
+                <script src="https://giscus.app/client.js" data-repo="TYFSADIK/tyfsadik" data-repo-id="R_kgDOOk6Jdw" data-category="Announcements" data-category-id="DIC_kwDOOk6Jd84Cpz1k" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="en" crossorigin="anonymous" async></script>
+            </section>
+            
+            <div>
+                <div class="pt-8 pb-4 text-sm" id="contact">
+                    <div class="grid grid-cols-3 text-center lg:grid-cols-6 gap-y-2">
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="mailto:hambahumbu@gmail.com?subject=Hello">Email</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://www.linkedin.com/in/md-taki-yasir-faraji-sadik-63a026278/">LinkedIn</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://github.com/TYFSADIK">GitHub</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://x.com/chill_____guy">&#120143;</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://www.youtube.com/@TYF_SADIK">YouTube</a>
+                        <a target="_blank" class="underline hover:bg-amber/40 px-2" href="https://www.instagram.com/sadik__actually/">Instagram</a>
+                    </div>
+                </div>
+                
+                <footer class="pt-8 pb-8 px-2 lg:px-0 text-center border-carbon text-xs text-carbon">
+                    &copy; 2018 - 2025, TYF Sadik.<wbr> Creative Commons Attribution 4.0 International License.
+                </footer>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
