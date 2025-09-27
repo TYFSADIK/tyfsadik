@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Hosted SMTP Email Server - TYF Sadik</title>
+    <title>Self-Hosted DNS Server (Pi-hole + Unbound) - TYF Sadik</title>
     <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
-    <meta name="title" content="Self-Hosted SMTP Email Server - tyfsadik.org">
-    <meta name="description" content="Complete production-ready self-hosted SMTP email server implementation for the domain tyfsadik.org">
+    <meta name="title" content="Self-Hosted DNS Server (Pi-hole + Unbound) - TYF Sadik">
+    <meta name="description" content="Robust, privacy-focused DNS infrastructure combining Pi-hole for ad-blocking and Unbound for recursive DNS resolution">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.tyfsadik.com/work/smtp-email-server/">
-    <meta property="og:title" content="Self-Hosted SMTP Email Server - TYF Sadik">
-    <meta property="og:description" content="Complete production-ready self-hosted SMTP email server implementation for the domain tyfsadik.org">
-    <meta property="og:image" content="https://tyfsadik.com/assets/smtp-server.jpg">
+    <meta property="og:url" content="https://www.tyfsadik.com/work/dns-server/">
+    <meta property="og:title" content="Self-Hosted DNS Server (Pi-hole + Unbound) - TYF Sadik">
+    <meta property="og:description" content="Robust, privacy-focused DNS infrastructure combining Pi-hole for ad-blocking and Unbound for recursive DNS resolution">
+    <meta property="og:image" content="https://tyfsadik.com/assets/dns-server.jpg">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.tyfsadik.com/work/smtp-email-server/">
-    <meta property="twitter:title" content="Self-Hosted SMTP Email Server">
-    <meta property="twitter:description" content="Complete production-ready self-hosted SMTP email server implementation for the domain tyfsadik.org">
-    <meta property="twitter:image" content="https://tyfsadik.com/assets/smtp-server.jpg">
+    <meta property="twitter:url" content="https://www.tyfsadik.com/work/dns-server/">
+    <meta property="twitter:title" content="Self-Hosted DNS Server (Pi-hole + Unbound)">
+    <meta property="twitter:description" content="Robust, privacy-focused DNS infrastructure combining Pi-hole for ad-blocking and Unbound for recursive DNS resolution">
+    <meta property="twitter:image" content="https://tyfsadik.com/assets/dns-server.jpg">
     <link rel="icon" type="image/jpeg" href="https://www.tyfsadik.com/assets/me.jpg">
     <link rel="stylesheet" href="../_astro/about.CzspFIqT.css" />
     <style>
@@ -71,283 +71,206 @@
                 <dl>
                     <dt class="sr-only">Date</dt>
                     <dd class="whitespace-nowrap not-prose pl-0 leading-6 font-mono text-sm text-carbon-lighter uppercase">
-                        <time datetime="2024-03-15">15 March 2024</time>
+                        <time datetime="2024-03-20">20 March 2024</time>
                     </dd>
                 </dl>
             </div>
             
-            <h1 class="font-mono uppercase text-2xl text-carbon-lighter">📧 Self-Hosted SMTP Email Server – tyfsadik.org</h1>
+            <h1 class="font-mono uppercase text-2xl text-carbon-lighter">🌐 Self-Hosted DNS Server (Pi-hole + Unbound)</h1>
             
             <figure>
-                <img src="../_astro/smtp-server-architecture.jpg" alt="SMTP Server Architecture" class="architecture-img">
+                <img src="../_astro/dns-server-architecture.jpg" alt="DNS Server Architecture" class="architecture-img">
             </figure>
             
             <section>
-                <p>A complete, production-ready <strong>self-hosted SMTP email server</strong> implementation for the domain <strong>tyfsadik.org</strong>. This setup ensures secure, reliable email delivery with enterprise-grade authentication protocols and security measures.</p>
+                <p>A robust, privacy-focused DNS infrastructure combining <strong>Pi-hole</strong> for ad-blocking and <strong>Unbound</strong> for recursive DNS resolution. This setup provides complete DNS independence, enhanced privacy, and network-wide ad blocking.</p>
             </section>
             
             <section>
-                <h1 id="quick-start">🚀 Quick Start</h1>
-                
-                <h2 id="prerequisites">Prerequisites</h2>
+                <h1 id="overview">🚀 Overview</h1>
+                <p>This project implements a self-hosted DNS resolution stack that eliminates dependence on external DNS providers. By combining <strong>Pi-hole</strong> (network-wide ad/tracker blocking) with <strong>Unbound</strong> (recursive DNS resolver), the system provides:</p>
                 <ul>
-                    <li>Ubuntu 22.04 LTS server</li>
-                    <li>Domain name (tyfsadik.org)</li>
-                    <li>Static IP address</li>
-                    <li>Root access to the server</li>
+                    <li><strong>Complete Privacy</strong>: No DNS query logging by third parties</li>
+                    <li><strong>Enhanced Performance</strong>: Local caching for faster resolution</li>
+                    <li><strong>Ad-Free Browsing</strong>: Network-wide blocking of ads and trackers</li>
+                    <li><strong>Security</strong>: DNSSEC validation and encrypted upstream communication</li>
                 </ul>
             </section>
             
             <section>
-                <h1 id="features">✨ Features</h1>
+                <h1 id="features">⚡ Features</h1>
+                
+                <h2 id="privacy-security">🔒 Privacy & Security</h2>
                 <ul>
-                    <li><strong>SMTP Service</strong> - Postfix with TLS/SSL encryption</li>
-                    <li><strong>IMAP/POP3 Service</strong> - Dovecot with Maildir storage</li>
-                    <li><strong>Email Authentication</strong> - SPF, DKIM, DMARC configured</li>
-                    <li><strong>Security</strong> - Fail2ban, UFW firewall, SSL certificates</li>
-                    <li><strong>Spam Protection</strong> - Basic RBL checks and filtering</li>
-                    <li><strong>Reliable Delivery</strong> - Proper DNS configuration and reverse DNS</li>
+                    <li><strong>Recursive DNS Resolution</strong>: Queries start from root servers</li>
+                    <li><strong>DNSSEC Validation</strong>: Ensures DNS response authenticity</li>
+                    <li><strong>No Logging</strong>: Self-hosted means no third-party data collection</li>
+                </ul>
+                
+                <h2 id="performance">🚀 Performance</h2>
+                <ul>
+                    <li><strong>Local Caching</strong>: Redundant query resolution in milliseconds</li>
+                    <li><strong>Aggressive Caching</strong>: TTL optimization for frequent domains</li>
                 </ul>
             </section>
             
             <section>
-                <h1 id="installation-steps">⚙️ Installation Steps</h1>
+                <h1 id="detailed-setup-guide">📖 Detailed Setup Guide</h1>
                 
-                <h2 id="system-preparation">1. System Preparation</h2>
-                <pre><code># Update system and install dependencies
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y postfix dovecot-core dovecot-imapd dovecot-pop3d \
-    openssl opendkim opendkim-tools ufw fail2ban mailutils</code></pre>
-                
-                <h2 id="basic-configuration">2. Basic Configuration</h2>
-                <p><strong>Postfix Main Configuration</strong> (<code>/etc/postfix/main.cf</code>):</p>
-                <pre><code>sudo nano /etc/postfix/main.cf</code></pre>
-                <p>Add/update these settings:</p>
-                <pre><code>myhostname = mail.tyfsadik.org
-mydomain = tyfsadik.org
-myorigin = $mydomain
-inet_interfaces = all
-mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
-home_mailbox = Maildir/
-smtpd_use_tls = yes
-smtpd_tls_cert_file = /etc/ssl/certs/mailserver.crt
-smtpd_tls_key_file = /etc/ssl/private/mailserver.key</code></pre>
-                
-                <h2 id="ssl-certificate-generation">3. SSL Certificate Generation</h2>
-                <pre><code># Create SSL directories
-sudo mkdir -p /etc/ssl/private
-sudo mkdir -p /etc/ssl/certs
+                <h2 id="lxc-container-setup">Step 1: LXC Container Setup</h2>
+                <pre><code># Create new LXC container (adjust ID and storage as needed)
+pct create 100 debian-12-standard_12.2-1_amd64.tar.zst \
+  --storage local-lvm \
+  --net0 name=eth0,bridge=vmbr0,ip=dhcp \
+  --memory 512 \
+  --cores 1
 
-# Generate self-signed certificate
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout /etc/ssl/private/mailserver.key \
-    -out /etc/ssl/certs/mailserver.crt \
-    -subj "/C=US/ST=State/L=City/O=Organization/CN=mail.tyfsadik.org"</code></pre>
+# Start container and set static IP
+pct start 100
+pct set 100 --net0 name=eth0,bridge=vmbr0,ip=192.168.1.10/24,gw=192.168.1.1</code></pre>
                 
-                <h2 id="dovecot-configuration">4. Dovecot Configuration</h2>
-                <pre><code>sudo nano /etc/dovecot/dovecot.conf</code></pre>
-                <p>Basic configuration:</p>
-                <pre><code>mail_location = maildir:~/Maildir
-protocols = imap pop3
-ssl = yes
-ssl_cert = </etc/ssl/certs/mailserver.crt
-ssl_key = </etc/ssl/private/mailserver.key</code></pre>
+                <h2 id="pi-hole-installation">Step 2: Pi-hole Installation</h2>
+                <pre><code># Update system and install Pi-hole
+apt update && apt upgrade -y
+curl -sSL https://install.pi-hole.net | bash</code></pre>
+                
+                <h2 id="unbound-installation-configuration">Step 3: Unbound Installation & Configuration</h2>
+                <pre><code># Install Unbound
+apt install unbound unbound-anchor -y
+
+# Download root hints
+curl -o /var/lib/unbound/root.hints https://www.internic.net/domain/named.cache
+
+# Create unbound configuration
+cat > /etc/unbound/unbound.conf.d/pi-hole.conf << 'EOF'
+server:
+    verbosity: 1
+    interface: 127.0.0.1
+    port: 5335
+    do-ip4: yes
+    do-udp: yes
+    do-tcp: yes
+    prefer-ip6: no
+    harden-glue: yes
+    harden-dnssec-stripped: yes
+    use-caps-for-id: yes
+    edns-buffer-size: 1472
+    prefetch: yes
+    num-threads: 1
+    so-rcvbuf: 1m
+    private-address: 192.168.0.0/16
+    private-address: 169.254.0.0/16
+    private-address: 172.16.0.0/12
+    private-address: 10.0.0.0/8
+    private-address: fd00::/8
+    private-address: fe80::/10
+
+    # Root hints
+    root-hints: "/var/lib/unbound/root.hints"
+
+    # DNSSEC
+    auto-trust-anchor-file: "/var/lib/unbound/root.key"
+    val-log-level: 2
+
+    # Cache settings
+    key-cache-size: 64m
+    key-cache-slabs: 4
+    neg-cache-size: 32m
+    msg-cache-size: 32m
+    msg-cache-slabs: 4
+    rrset-cache-size: 64m
+    rrset-cache-slabs: 4
+    cache-min-ttl: 3600
+    cache-max-ttl: 86400
+
+    # Security
+    unwanted-reply-threshold: 10000000
+    val-nsec-type: "proof"
+    serve-expired: yes
+    serve-expired-ttl: 3600
+    aggressive-nsec: yes
+EOF
+
+# Initialize root anchor and set permissions
+unbound-anchor -a /var/lib/unbound/root.key
+chown unbound:unbound /var/lib/unbound/root.hints
+chown unbound:unbound /var/lib/unbound/root.key
+
+# Start and enable Unbound
+systemctl enable unbound
+systemctl start unbound
+
+# Test Unbound
+dig @127.0.0.1 -p 5335 google.com</code></pre>
+                
+                <h2 id="configure-pi-hole-to-use-unbound">Step 4: Configure Pi-hole to Use Unbound</h2>
+                <ol>
+                    <li>Access Pi-hole admin panel: <code>http://your-container-ip/admin</code></li>
+                    <li>Navigate to <strong>Settings > DNS</strong></li>
+                    <li>Remove all upstream DNS servers</li>
+                    <li>Add custom upstream DNS: <code>127.0.0.1#5335</code></li>
+                    <li>Enable <strong>Use DNSSEC</strong> and <strong>Use conditional forwarding</strong> if needed</li>
+                </ol>
+                
+                <h2 id="router-configuration">Step 5: Router Configuration</h2>
+                <p>Configure your router to use the Pi-hole container as the primary DNS server:</p>
+                <ul>
+                    <li><strong>DHCP DNS Settings</strong>: Set to your container's IP (e.g., 192.168.1.10)</li>
+                </ul>
             </section>
             
             <section>
-                <h1 id="dns-configuration">🌐 DNS Configuration</h1>
+                <h1 id="troubleshooting">🐛 Troubleshooting</h1>
                 
-                <h2 id="essential-dns-records">Essential DNS Records:</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Type</th>
-                            <th>Name</th>
-                            <th>Value</th>
-                            <th>Priority</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>A</strong></td>
-                            <td><code>mail.tyfsadik.org</code></td>
-                            <td><code>YOUR_SERVER_IP</code></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MX</strong></td>
-                            <td><code>@</code></td>
-                            <td><code>mail.tyfsadik.org</code></td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TXT</strong></td>
-                            <td><code>@</code></td>
-                            <td><code>v=spf1 mx ~all</code></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TXT</strong></td>
-                            <td><code>_dmarc</code></td>
-                            <td><code>v=DMARC1; p=none; rua=mailto:admin@tyfsadik.org</code></td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2 id="common-issues-solutions">Common Issues & Solutions</h2>
                 
-                <h2 id="dkim-setup">DKIM Setup</h2>
-                <pre><code># Install and configure OpenDKIM
-sudo apt install -y opendkim opendkim-tools
+                <h3 id="dns-resolution-failing">DNS Resolution Failing</h3>
+                <pre><code># Test Unbound resolution
+dig @127.0.0.1 -p 5335 example.com
 
-# Generate DKIM keys
-sudo mkdir -p /etc/opendkim/keys/tyfsadik.org
-sudo opendkim-genkey -D /etc/opendkim/keys/tyfsadik.org/ -d tyfsadik.org -s mail
-sudo chown opendkim:opendkim /etc/opendkim/keys/tyfsadik.org/mail.private
-
-# View DKIM record for DNS
-sudo cat /etc/opendkim/keys/tyfsadik.org/mail.txt</code></pre>
-            </section>
-            
-            <section>
-                <h1 id="security-configuration">🔒 Security Configuration</h1>
+# Check Unbound logs
+journalctl -u unbound -f</code></pre>
                 
-                <h2 id="firewall-setup">Firewall Setup</h2>
-                <pre><code># Configure UFW firewall
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow ssh
-sudo ufw allow 25/tcp    # SMTP
-sudo ufw allow 587/tcp   # Submission
-sudo ufw allow 465/tcp   # SMTPS
-sudo ufw allow 993/tcp   # IMAPS
-sudo ufw allow 995/tcp   # POP3S
-sudo ufw enable</code></pre>
-                
-                <h2 id="fail2ban-protection">Fail2ban Protection</h2>
-                <pre><code>sudo nano /etc/fail2ban/jail.local</code></pre>
-                <p>Add these configurations:</p>
-                <pre><code>[postfix]
-enabled = true
-port = smtp,465,submission
-filter = postfix
-logpath = /var/log/mail.log
-maxretry = 3
-bantime = 3600
+                <h3 id="service-not-starting">Service Not Starting</h3>
+                <pre><code># Check service status
+systemctl status unbound
+systemctl status pihole-FTL
 
-[dovecot]
-enabled = true
-port = pop3,pop3s,imap,imaps
-filter = dovecot
-logpath = /var/log/mail.log
-maxretry = 3
-bantime = 3600</code></pre>
-            </section>
-            
-            <section>
-                <h1 id="testing-your-setup">🧪 Testing Your Setup</h1>
-                
-                <h2 id="test-smtp-service">Test SMTP Service</h2>
-                <pre><code># Test SMTP connectivity
-telnet mail.tyfsadik.org 25
-
-# Send test email
-echo "Test message from SMTP server" | mail -s "Server Test" your-email@gmail.com</code></pre>
-                
-                <h2 id="verify-dns-records">Verify DNS Records</h2>
-                <pre><code># Check MX record
-dig MX tyfsadik.org +short
-
-# Check SPF record
-dig TXT tyfsadik.org +short
-
-# Check if ports are open
-nmap -p 25,587,465,993,995 mail.tyfsadik.org</code></pre>
-                
-                <h2 id="service-management">Service Management</h2>
-                <pre><code># Restart all services
-sudo systemctl restart postfix dovecot opendkim fail2ban
-
-# Enable on boot
-sudo systemctl enable postfix dovecot opendkim fail2ban
-
-# Check status
-sudo systemctl status postfix dovecot</code></pre>
+# Verify configuration syntax
+unbound-checkconf /etc/unbound/unbound.conf.d/pi-hole.conf</code></pre>
             </section>
             
             <section>
                 <h1 id="monitoring-maintenance">📊 Monitoring & Maintenance</h1>
-                
-                <h2 id="check-mail-logs">Check Mail Logs</h2>
-                <pre><code># Real-time log monitoring
-sudo tail -f /var/log/mail.log
+                <pre><code># Check service status
+systemctl status pihole-FTL
+systemctl status unbound
 
-# Check for errors
-sudo grep -i error /var/log/mail.log
+# Update blocklists
+pihole -g
 
-# Monitor mail queue
-mailq</code></pre>
-                
-                <h2 id="backup-script">Backup Script</h2>
-                <pre><code>#!/bin/bash
-# scripts/backup-mail.sh
-
-BACKUP_DIR="/backup/mail-$(date +%Y%m%d)"
-mkdir -p $BACKUP_DIR
-
-# Backup configurations
-cp -r /etc/postfix $BACKUP_DIR/
-cp -r /etc/dovecot $BACKUP_DIR/
-cp -r /etc/opendkim $BACKUP_DIR/
-
-# Backup mail directories
-tar -czf $BACKUP_DIR/maildir.tar.gz /var/mail/
-
-echo "Backup completed: $BACKUP_DIR"</code></pre>
-            </section>
-            
-            <section>
-                <h1 id="troubleshooting-common-issues">🐛 Troubleshooting Common Issues</h1>
-                
-                <h2 id="emails-not-sending">Emails Not Sending</h2>
-                <pre><code># Check Postfix configuration
-sudo postfix check
-sudo postconf -n
-
-# Check if Postfix is running
-sudo systemctl status postfix
-
-# Check mail queue
-sudo mailq</code></pre>
-                
-                <h2 id="authentication-problems">Authentication Problems</h2>
-                <pre><code># Check Dovecot status
-sudo systemctl status dovecot
-
-# Test authentication
-telnet localhost 993
-
-# Check authentication logs
-sudo grep "authentication" /var/log/mail.log</code></pre>
-                
-                <h2 id="dns-issues">DNS Issues</h2>
-                <pre><code># Verify all DNS records
-dig MX tyfsadik.org
-dig A mail.tyfsadik.org
-dig TXT tyfsadik.org
-dig TXT _dmarc.tyfsadik.org</code></pre>
-            </section>
-            
-            <section>
-                <h1 id="support">📞 Support</h1>
-                <ul>
-                    <li><strong>Email</strong>: <a href="mailto:taki@tyfsadik.org">taki@tyfsadik.org</a></li>
-                    <li><strong>Domain</strong>: <a href="https://tyfsadik.org">tyfsadik.org</a></li>
-                </ul>
+# Update Unbound root hints
+curl -o /var/lib/unbound/root.hints https://www.internic.net/domain/named.cache
+systemctl restart unbound</code></pre>
             </section>
             
             <section>
                 <h1 id="license">📄 License</h1>
-                <p>MIT License - feel free to use this configuration for your own projects.</p>
+                <p>This project is licensed under the MIT License.</p>
+            </section>
+            
+            <section>
+                <h1 id="connect">🌐 Connect</h1>
+                <p><strong>Taki Sadik</strong></p>
+                <ul>
+                    <li>🖥️ <strong>GitHub</strong>: <a href="https://github.com/TYFSADIK">TYFSADIK</a></li>
+                    <li>🌍 <strong>Website</strong>: <a href="https://tyfsadik.com">tyfsadik.org</a></li>
+                </ul>
+            </section>
+            
+            <section>
+                <p><em>Last updated: March 2024</em><br>
+                <em>Maintained with ❤️ by Taki Sadik</em></p>
             </section>
             
             <section>
