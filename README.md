@@ -1,5 +1,6 @@
 <div align="center">
-<img src="./hero-banner.svg" alt="Hi, I am Taki - Cybersecurity Analyst, Homelab Architect, Builder" width="100%" />
+<img width="1942" height="809" alt="Home_Lab" src="https://github.com/user-attachments/assets/f83ce41f-eab9-415d-b0f3-93ffa2d87e5a" />
+
 <a href="https://tyfsadik.org">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Operations+Center+(SOC)+%26+Incident+Response;Cloud+Security+(Azure,+AWS)+%26+Infrastructure+Defense;25-Project+Homelab+%26+7-Node+Bare-Metal+K8s+Cluster;Full-Stack+Web+Developer+%7C+Open+Source+Contributor" alt="specializations" />
 </a>
