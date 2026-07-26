@@ -1,6 +1,7 @@
 <!-- markdownlint-disable-file MD033 -->
 <div align="center">
-<img width="1942" height="809" alt="Home_Lab" src="https://github.com/user-attachments/assets/6612a807-aafc-4007-8dd2-1385fafa17c6" />
+
+<img width="1942" height="809" alt="Home_Lab" src="https://github.com/user-attachments/assets/79faa19f-81db-4697-9a06-a03246f5c348" />
 
 
 <a href="https://tyfsadik.org">
@@ -22,7 +23,7 @@
 [![LinkedIn](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/md-taki-yasir-faraji-sadik-63a026278/)
 [![GitHub](https://skillicons.dev/icons?i=github)](https://github.com/TYFSADIK)
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>About Me</h2>
 
@@ -43,7 +44,7 @@ I also design and deploy responsive business websites for local Toronto clients,
   <img src="https://img.shields.io/badge/Web_Projects-8%2B-e0af68?style=for-the-badge&labelColor=1a1b26" alt="8 web projects" />
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>Flagship Infrastructure &amp; Security Projects</h2>
 
@@ -135,7 +136,7 @@ Instrumented an AD forest with Sysmon and Splunk; hunted Kerberoasting, Pass-the
 
 </details>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>Professional Experience</h2>
 
@@ -184,7 +185,7 @@ Instrumented an AD forest with Sysmon and Splunk; hunted Kerberoasting, Pass-the
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>Web Development Portfolio</h2>
 
@@ -229,7 +230,7 @@ Multi-jurisdiction tax calculator handling federal and provincial brackets with 
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>Technical Skills</h2>
 
@@ -263,7 +264,7 @@ Multi-jurisdiction tax calculator handling federal and provincial brackets with 
 **SOC / Security Tooling**
 `Splunk` `Wireshark` `Nmap` `Metasploit` `Burp Suite` `Wazuh` `TheHive` `Cortex` `MISP` `BloodHound` `Sysmon` `YARA` `nftables`
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>Live Infrastructure</h2>
 
@@ -276,7 +277,7 @@ Multi-jurisdiction tax calculator handling federal and provincial brackets with 
   <img src="https://img.shields.io/badge/TLS_1.3-65.8%25-bb9af7?style=flat-square&labelColor=1a1b26" alt="65.8% TLS 1.3" />
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>GitHub Statistics</h2>
 
@@ -307,7 +308,7 @@ Multi-jurisdiction tax calculator handling federal and provincial brackets with 
 </tr>
 </table>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+---
 
 <h2>Activity Graph</h2>
 
@@ -318,7 +319,5 @@ Multi-jurisdiction tax calculator handling federal and provincial brackets with 
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
   <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" />
 </picture>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=120&section=footer&text=Securing%20infrastructure%20from%20the%20ground%20up&fontSize=15&fontColor=c0caf5&fontAlignY=75" alt="footer wave" />
 
 </div>
