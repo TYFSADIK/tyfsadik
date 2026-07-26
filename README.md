@@ -29,9 +29,9 @@
 
 </div>
 
-I'm a cybersecurity analyst focused on the detection, triage, and response side of the SOC — reading alerts, tracing root cause, and closing the loop before a small anomaly becomes an incident. I split my time between hardening Azure and AWS infrastructure professionally and running a production-grade homelab that hosts everything from a self-trained LLM to a zero-public-ingress private cloud, built, broken, and rebuilt by hand.
+I'm a cybersecurity analyst focused on the detection, triage, and response side of the SOC reading alerts, tracing root cause, and closing the loop before a small anomaly becomes an incident. I split my time between hardening Azure and AWS infrastructure professionally and running a production-grade homelab that hosts everything from a self-trained LLM to a zero-public-ingress private cloud, built, broken, and rebuilt by hand.
 
-> *I don't fully trust a system until I've tried to break it myself — the homelab below is where that happens before it happens on the job.*
+> *I don't fully trust a system until I've tried to break it myself the homelab below is where that happens before it happens on the job.*
 
 I also design and deploy responsive business websites for local Toronto clients, from initial brief through deployment on GitHub Pages — whether that's a glass contractor in the GTA or a pharmacy that needs WCAG-compliant accessibility.
 
