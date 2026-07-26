@@ -1,7 +1,8 @@
 <!-- markdownlint-disable-file MD033 -->
 <div align="center">
 
-<h1>Taki Sadik | Cybersecurity Analyst</h1>
+<h1>MD. Taki Yasir Faraji Sadik</h1>
+<h3>Cybersecurity Analyst & SOC Specialist</h3>
 
 <a href="https://tyfsadik.org">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=780&height=45&lines=Security+Operations+Center+(SOC)+%26+Incident+Response;Cloud+Security+(Azure,+AWS)+%26+Infrastructure+Defense;Architect+of+a+25-Project+Homelab+%26+7-Node+K8s+Cluster;Training+and+Serving+AI+Models+on+Hardware+I+Own" alt="specializations" />
@@ -11,7 +12,7 @@
   <img src="https://komarev.com/ghpvc/?username=TYFSADIK&label=Profile%20views&color=7aa2f7&style=flat" alt="profile views" />
   <img src="https://img.shields.io/badge/Open_to-SOC_%2F_Cloud_Security_Roles-9ece6a?style=flat&labelColor=1a1b26" alt="open to work" />
   <img src="https://img.shields.io/badge/Based_in-Toronto,_CA-7aa2f7?style=flat&labelColor=1a1b26" alt="location" />
-  <img src="https://img.shields.io/badge/Certifications-25%2B-bb9af7?style=flat&labelColor=1a1b26" alt="certifications" />
+  <img src="https://img.shields.io/badge/Certifications-15%2B-bb9af7?style=flat&labelColor=1a1b26" alt="certifications" />
 </p>
 
 <img src="https://github-profile-trophy-fork-two.vercel.app/?username=TYFSADIK&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7&title=Commits,Repositories,Stars,Followers,PullRequest,MultiLanguage,Experience" alt="trophies" />
@@ -24,40 +25,42 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
 
-<h2>About Me</h2>
-
 </div>
 
-As a cybersecurity analyst, my focus is the detection, triage, and response side of the SOC — reading alerts, tracing root cause, and closing the loop before a small anomaly becomes an incident. I split my time between hardening Azure and AWS cloud infrastructure and running a production-grade homelab: a 25-project ecosystem anchored by a 7-node bare-metal Kubernetes cluster that hosts everything from a self-trained LLM to a zero-public-ingress private cloud. Everything in it is built, broken, and rebuilt by hand — that hands-on loop is where most of what I know about defending infrastructure actually came from.
+## 👨‍💻 About Me
+
+As a Cybersecurity Analyst and SOC Specialist, my focus is the detection, triage, and response side of security operations — reading alerts, tracing root cause, and closing the loop before a small anomaly becomes an incident. 
+
+I split my time between hardening Azure and AWS cloud infrastructure and running a production-grade, **25-project homelab ecosystem**. This ecosystem is anchored by a **7-node bare-metal Kubernetes cluster** that hosts everything from a self-trained 7B LLM to a zero-public-ingress private cloud. Everything in it is built, broken, and rebuilt by hand. This hands-on loop, backed by **116+ documented lab writeups** and industry certifications, is where my deepest infrastructure defense knowledge comes from.
 
 <div align="center">
 
 <p>
-  <img src="https://img.shields.io/badge/Homelab_Projects-25-e0af68?style=for-the-badge&labelColor=1a1b26" alt="25 projects" />
-  <img src="https://img.shields.io/badge/Lab_Writeups-116-9ece6a?style=for-the-badge&labelColor=1a1b26" alt="116 labs" />
+  <img src="https://img.shields.io/badge/Homelab_Projects-25%2B-e0af68?style=for-the-badge&labelColor=1a1b26" alt="25+ projects" />
+  <img src="https://img.shields.io/badge/Lab_Writeups-116%2B-9ece6a?style=for-the-badge&labelColor=1a1b26" alt="116+ labs" />
   <img src="https://img.shields.io/badge/K8s_Cluster-7_Nodes-7aa2f7?style=for-the-badge&labelColor=1a1b26" alt="7 node k8s" />
   <img src="https://img.shields.io/badge/DNS_Records-31-bb9af7?style=for-the-badge&labelColor=1a1b26" alt="31 dns records" />
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
 
-<h2>Flagship Projects</h2>
-
 </div>
+
+## 🚀 Flagship Projects
 
 <table>
 <tr>
 <td valign="top" width="50%">
 
-**[7-Node Bare-Metal Kubernetes Cluster](https://tyfsadik.org/work/infrastructure/kubernetes-infrastructure.html)**
-Production-grade K8s cluster across 3 desktop PCs and 4 laptops on a Proxmox/kubeadm base, with VLAN-segmented networking (Mgmt/Cluster/Storage), Calico for CNI and NetworkPolicy, MetalLB for bare-metal LoadBalancers, Longhorn for 3x-replicated storage, and a Prometheus + Grafana + Loki observability stack. Hosts every other self-hosted service in production.
+**[7-Node Bare-Metal Kubernetes Cluster](https://tyfsadik.org/work/infrastructure/kubernetes-infrastructure.html)**  
+Production-grade K8s cluster across 3 desktop PCs and 4 laptops on a Proxmox/kubeadm base, with VLAN-segmented networking (Mgmt/Cluster/Storage), Calico for CNI/NetworkPolicy, MetalLB for bare-metal LoadBalancers, Longhorn for 3x-replicated storage, and a Prometheus + Grafana + Loki observability stack.  
 <br>`Kubernetes` `Calico` `MetalLB` `Longhorn` `Prometheus` `Grafana`
 
 </td>
 <td valign="top" width="50%">
 
-**[TYF-AI — Self-Hosted Local AI Security Platform](https://tyfsadik.org/work/infrastructure/tyf-ai-platform.html)**
-Hardened local inference stack that treats the model runtime as an untrusted workload: llama.cpp with CUDA behind an authenticated Caddy reverse proxy, per-model Firejail sandboxing (`--net=none`), SHA-256-pinned GGUF weights, and GPU passthrough on Proxmox. STRIDE-modeled end to end. Serves 50+ concurrent queries at sub-2s latency with zero external AI API calls.
+**[TYF-AI — Self-Hosted Local AI Security Platform](https://tyfsadik.org/work/infrastructure/tyf-ai-platform.html)**  
+Hardened local inference stack treating the model runtime as an untrusted workload: `llama.cpp` with CUDA behind an authenticated Caddy reverse proxy, per-model Firejail sandboxing (`--net=none`), SHA-256-pinned GGUF weights, and GPU passthrough on Proxmox. STRIDE-modeled end-to-end.  
 <br>`llama.cpp` `CUDA` `Caddy` `Firejail` `Proxmox` `GPU Passthrough`
 
 </td>
@@ -65,15 +68,15 @@ Hardened local inference stack that treats the model runtime as an untrusted wor
 <tr>
 <td valign="top" width="50%">
 
-**[Proxmox VE Zero-Trust Private Cloud](https://tyfsadik.org/work/infrastructure/proxmox-zero-trust.html)**
-3-node Proxmox VE HA cluster on Ceph with four trust-tiered VLANs and zero public ingress — the only path in is a policy-gated Cloudflare Tunnel, with a Tailscale mesh as authenticated fallback. Automated hourly/daily/30-day ZFS snapshots via sanoid/syncoid. Eliminated 100% of public IP exposure at sub-50ms global tunnel latency.
+**[Proxmox VE Zero-Trust Private Cloud](https://tyfsadik.org/work/infrastructure/proxmox-zero-trust.html)**  
+3-node Proxmox VE HA cluster on Ceph with four trust-tiered VLANs and zero public ingress. The only path in is a policy-gated Cloudflare Tunnel, with a Tailscale mesh as authenticated fallback. Automated hourly/daily/30-day ZFS snapshots via sanoid/syncoid.  
 <br>`Proxmox VE` `Ceph` `Cloudflare Tunnel` `Tailscale` `ZFS`
 
 </td>
 <td valign="top" width="50%">
 
-**[Data Sovereignty & Secure Media Stack](https://tyfsadik.org/work/infrastructure/data-sovereignty-stack.html)**
-Nextcloud AIO and Immich replacing Google Drive/Photos entirely, running on a zstd-compressed BTRFS pool across external SSDs with per-user ACL isolation. A 3-2-1 backup pipeline (local BTRFS snapshot → BorgBase → rsync.net) has run with zero data-loss events, at ~2.5 Gbps sustained read/write.
+**[Data Sovereignty & Secure Media Stack](https://tyfsadik.org/work/infrastructure/data-sovereignty-stack.html)**  
+Nextcloud AIO and Immich replacing Google Drive/Photos entirely, running on a zstd-compressed BTRFS pool across external SSDs with per-user ACL isolation. A 3-2-1 backup pipeline (local BTRFS snapshot → BorgBase → rsync.net) runs with zero data-loss events.  
 <br>`Nextcloud` `Immich` `BTRFS` `BorgBase` `rsync.net`
 
 </td>
@@ -81,15 +84,15 @@ Nextcloud AIO and Immich replacing Google Drive/Photos entirely, running on a zs
 <tr>
 <td valign="top" width="50%">
 
-**[Chakor — Self-Hosted AI Workspace](https://ai.tyfsadik.org)** · MIT, open source
-A Next.js 15 / TypeScript AI workspace you run on your own hardware — local engines (llama.cpp, Ollama, LM Studio) or your own cloud keys, one-tap model switching, hardware-aware `FITS`/`TIGHT`/`TOO BIG` fit tagging to prevent OOM loads, in-app GGUF downloads from Hugging Face, web search, document chat, blind model A/B compare, and cross-conversation memory — all in a local SQLite store, no telemetry.
+**[Chakor — Self-Hosted AI Workspace](https://ai.tyfsadik.org)** *(MIT, Open Source)*  
+A Next.js 15 / TypeScript AI workspace you run on your own hardware. Features local engines (llama.cpp, Ollama), hardware-aware `FITS`/`TIGHT`/`TOO BIG` fit tagging to prevent OOM loads, in-app GGUF downloads, web search, document chat, and cross-conversation memory in a local SQLite store.  
 <br>`Next.js 15` `TypeScript` `SQLite` `llama.cpp` `Ollama`
 
 </td>
 <td valign="top" width="50%">
 
-**[Chakor — Custom 7B LLM from Scratch](https://ai.tyfsadik.org)**
-A ~7B-parameter decoder-only transformer (32 layers, 32 heads, 4096 hidden dim) written and trained from random initialization in PyTorch — attention, RoPE, RMSNorm, and the training loop all hand-built. Pretrained on a 100B+ token curated corpus via distributed multi-GPU DDP, instruction-tuned, then converted to GGUF and served 24/7 through a custom SSE-streaming llama.cpp front end.
+**[Chakor — Custom 7B LLM from Scratch](https://ai.tyfsadik.org)**  
+A ~7B-parameter decoder-only transformer (32 layers, 32 heads, 4096 hidden dim) written and trained from random initialization in PyTorch. Pretrained on a 100B+ token curated corpus via distributed multi-GPU DDP, instruction-tuned, then converted to GGUF and served 24/7.  
 <br>`PyTorch` `Distributed Training` `GGUF` `llama.cpp` `Next.js`
 
 </td>
@@ -97,61 +100,73 @@ A ~7B-parameter decoder-only transformer (32 layers, 32 heads, 4096 hidden dim) 
 <tr>
 <td valign="top" width="50%">
 
-**[SearXNG Private Search Engine](https://search.tyfsadik.org)**
-Self-hosted meta-search aggregating results from multiple providers with no tracking — hardened with query sanitization against injection, search-history protection, and TLS-secured API calls end to end.
-<br>`SearXNG` `Docker` `Nginx`
+**[Automated SOC Pipeline](https://tyfsadik.org/work.html)**  
+Wazuh detections wired into TheHive case management with MISP threat-intel enrichment. Custom detection rules tagged to MITRE ATT&CK technique IDs, with automated active response blocking brute-force sources.  
+<br>`Wazuh` `TheHive` `Cortex` `MISP` `MITRE ATT&CK`
 
 </td>
 <td valign="top" width="50%">
 
-**[Automated SOC Pipeline](https://tyfsadik.org/work.html)**
-Wazuh detections wired into TheHive case management with MISP threat-intel enrichment; custom detection rules tagged to MITRE ATT&CK technique IDs, with automated active response blocking brute-force sources.
-<br>`Wazuh` `TheHive` `Cortex` `MISP` `MITRE ATT&CK`
+**[Active Directory Threat Hunting Lab](https://tyfsadik.org/blog/labs/security/ad-threat-hunting.html)**  
+Instrumented AD forest with Sysmon and Splunk; hunted Kerberoasting, Pass-the-Hash, and Golden Ticket attacks. Deployed honeypot SPN account for high-fidelity early warning, detecting PtH within 2 minutes and mapping 15+ lateral-movement paths.  
+<br>`BloodHound` `SharpHound` `Sysmon` `Splunk` `Kerberos`
 
 </td>
 </tr>
 </table>
 
-<div align="center">
-
 <details>
-<summary><strong>Additional self-hosted services (click to expand)</strong></summary>
+<summary><strong>📂 Additional Self-Hosted Services (Click to Expand)</strong></summary>
 <br>
 
-| Service | Stack | Endpoint |
+| Service | Stack | Endpoint / Status |
 |---|---|---|
-| Cloud Storage | Nextcloud, MariaDB, Docker | `cloud.tyfsadik.org` |
-| Photo Management | Immich, PostgreSQL, ML face recognition | `photo.tyfsadik.org` |
-| Wiki Mirror | Kiwix, full Wikipedia mirror | `wiki.tyfsadik.org` |
-| DNS | Pi-hole + Unbound, recursive resolution | Internal |
-| Email | Postfix + Dovecot + DKIM | `@tyfsadik.org` |
-| Remote Desktop | Arch Linux + XFCE via WSL2, no port forwarding | ★ 5 GitHub stars |
+| **Cloud Storage** | Nextcloud, MariaDB, Docker | `cloud.tyfsadik.org` |
+| **Photo Management** | Immich, PostgreSQL, ML face recognition | `photo.tyfsadik.org` |
+| **Private Search Engine** | SearXNG, Docker, Nginx | `search.tyfsadik.org` |
+| **Public Wiki Mirror** | Kiwix, full Wikipedia mirror | `wiki.tyfsadik.org` |
+| **Network DNS** | Pi-hole + Unbound, recursive resolution | Internal Network |
+| **Private Email Server** | Postfix + Dovecot + DKIM | `@tyfsadik.org` |
+| **Remote Desktop** | Arch Linux + XFCE via WSL2 (No port forwarding) | ⭐ 5 GitHub Stars |
 
 </details>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
 
-<h2>Technical Skills</h2>
+## 💼 Professional Experience
 
-</div>
+- **Incident Analyst** @ **Shield Security Systems** *(Nov 2025 – Present)*  
+  Monitor security systems, triage alerts, and escalate events per SOPs. Perform ongoing threat assessments and vulnerability analysis.
+- **Incident Manager** @ **CN Tower / Tour CN** *(Aug 2025 – Present)*  
+  Lead end-to-end incident lifecycle: detection, triage, prioritization, escalation, resolution, and post-incident review for critical infrastructure.
+- **Cloud Support Engineer (Intern)** @ **Microsoft** *(May 2025 – Sep 2025)*  
+  Provided cloud support engineering for Azure-based enterprise customers, diagnosing and resolving infrastructure, networking, and identity issues.
+- **Network Analyst Intern** @ **CardiOCare** *(Jan 2025 – Sep 2025)*  
+  Monitored network infrastructure, performed packet analysis/traffic monitoring using IDS, and supported deployment of cloud-connected devices.
+- **Server Operator (Junior)** @ **Fiera Foods** *(Jun 2024 – Jul 2025)*  
+  Managed server alerts on Linux/Windows Server, performed daily maintenance (backups, patching), and leveraged SQL for data workflows.
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+
+## 🛠️ Technical Skills
 
 <table>
 <tr>
 <td valign="top" align="center" width="33%">
 
-### Cloud & DevOps
+### ☁️ Cloud & DevOps
 <img src="https://skillicons.dev/icons?i=aws,azure,gcp,cloudflare,docker,kubernetes,nginx,ansible,terraform,prometheus,grafana,git&perline=4" alt="cloud and devops skills" />
 
 </td>
 <td valign="top" align="center" width="33%">
 
-### Systems & Security
+### 🖥️ Systems & Security
 <img src="https://skillicons.dev/icons?i=linux,ubuntu,kali,debian,bash,powershell,vim,regex&perline=4" alt="systems and security skills" />
 
 </td>
 <td valign="top" align="center" width="33%">
 
-### Languages & Data
+### 💻 Languages & Data
 <img src="https://skillicons.dev/icons?i=python,ts,js,php,rust,mysql,postgres,mongodb&perline=4" alt="languages and data skills" />
 
 </td>
@@ -160,14 +175,33 @@ Wazuh detections wired into TheHive case management with MISP threat-intel enric
 
 <div align="center">
 
-**SOC / Security Tooling**
+**🛡️ SOC / Security Tooling**  
 `Splunk` `Wireshark` `Nmap` `Metasploit` `Burp Suite` `Wazuh` `TheHive` `Cortex` `MISP` `BloodHound` `Sysmon` `YARA` `nftables`
+
+</div>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
 
-<h2>Live Infrastructure</h2>
+## 🎓 Education & Certifications
 
-<p>31 DNS records managed across <code>tyfsadik.org</code>, all fronted by Cloudflare Tunnels — no service on the homelab exposes a public port directly.</p>
+**Education**
+- **Advanced Diploma, Computer Networking & Cybersecurity** | Seneca Polytechnic *(2023 – 2026)*
+- **BSc, Computer Networking & Cybersecurity** | University of Toronto *(2022 – 2026)*
+
+**Key Certifications**
+- ✅ **Microsoft**: Azure Fundamentals (AZ-900), MSSQL Certification
+- ✅ **Amazon Web Services**: Cloud Practitioner, AWS Academy Cloud Security
+- ✅ **CompTIA**: A+ Certified Professional *(Security+ In Progress)*
+- ✅ **Cisco**: CCNA Fundamentals, Cybersecurity Defense Analyst *(Expected May 2026)*
+- ✅ **OPSWAT**: Critical Infrastructure Protection (CIP), ICIP
+- ✅ **ISC2**: Certified in Cybersecurity (CC) Candidate
+- ✅ **Other**: Ontario Security Guard Licence, Smart Serve Ontario, First Aid & CPR
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
+
+## 🌐 Live Infrastructure
+
+<p>31 DNS records managed across <code>tyfsadik.org</code>, all fronted by Cloudflare Tunnels — <strong>no service on the homelab exposes a public port directly</strong>.</p>
 
 <p>
   <img src="https://img.shields.io/badge/Requests-296K-7aa2f7?style=flat-square&labelColor=1a1b26" alt="296k requests" />
@@ -178,7 +212,7 @@ Wazuh detections wired into TheHive case management with MISP threat-intel enric
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
 
-<h2>GitHub Statistics</h2>
+## 📊 GitHub Statistics
 
 <table>
 <tr>
@@ -209,7 +243,7 @@ Wazuh detections wired into TheHive case management with MISP threat-intel enric
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=3" alt="divider" />
 
-<h2>Activity Graph</h2>
+## 📈 Activity Graph
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=TYFSADIK&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Graph" alt="contribution activity graph" />
 
@@ -220,5 +254,3 @@ Wazuh detections wired into TheHive case management with MISP threat-intel enric
 </picture>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b26,50:7aa2f7,100:1a1b26&height=120&section=footer&text=Securing%20infrastructure%20from%20the%20ground%20up&fontSize=15&fontColor=c0caf5&fontAlignY=75" alt="footer wave" />
-
-</div>
