@@ -1,7 +1,8 @@
 <div align="center">
 <!-- BANNER IMAGE: Upload this image to your profile repo and update the path below -->
 <!-- Recommended: Save the image as `banner.png` in your profile repo root -->
-<img src="https://raw.githubusercontent.com/TYFSADIK/TYFSADIK/main/banner.png" alt="Hi, I am Taki - developer, maker, and creator" width="100%" />
+<img width="1942" height="809" alt="ChatGPT Image Jul 26, 2026, 09_52_09 AM" src="https://github.com/user-attachments/assets/a2da9f59-447a-4b22-b629-81b207d2f8f4" />
+
 
 
 <a href="https://tyfsadik.org">
