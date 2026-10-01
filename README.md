@@ -17,11 +17,25 @@
 
 <h2>About Me</h2>
 </div>
-I'm Taki Sadik, a cybersecurity and IT professional based in North York, Toronto who likes to own his stack end to end. By day I triage security alerts and analyze threats at a SOC, and apply cyber threat intelligence to physical data center infrastructure at Microsoft. Outside of work I run a production-grade homelab on Proxmox, self-host everything from a private AI model to a public Wikipedia mirror, and document it all as hands-on labs.
+
+
+Name
+Taki Sadik, cybersecurity and IT professional
+Based in
+North York, Toronto, Canada
+Day job
+SOC alert triage and threat analysis; cyber threat intelligence for physical data center infrastructure at Microsoft
+Homelab
+Production-grade Proxmox lab: private AI model, public Wikipedia mirror, 9 self-hosted services, all documented as hands-on labs
+Hardware
+Canadian Defence Hardware Program: 11 sensor and robotics builds mapped to Defence Drone Initiative and Army MINERVA requirements
+Web
+Responsive, accessibility-first business websites for Toronto clients, from brief to GitHub Pages deployment
+Background
+Started in surveillance operations; moved through networking, Linux administration, cloud, then security
+Credentials
+CompTIA A+ and CCNA Fundamentals held; CompTIA Security+ in progress
 I don't fully trust a system until I've tried to break it myself. The homelab below is where that happens before it happens on the job.
-I got into IT through surveillance operations and discovered I cared more about the network underneath the cameras than the footage they captured. That curiosity led to networking, then Linux administration, then cloud, then security. I hold CompTIA A+ and CCNA Fundamentals and I'm currently pursuing CompTIA Security+.
-Increasingly, that same instinct extends to hardware. My Canadian Defence Hardware Program is eleven sensor and robotics builds across sky, water, and ground (passive radar, hydrophone vessel monitors, seismic LoRa meshes, GPS-denied rovers, and a thermal SAR drone), each mapped to a real requirement from Canada's Defence Drone Initiative and the Army's MINERVA challenges.
-I also design and deploy responsive, accessibility-first business websites for local Toronto clients, from initial brief through deployment on GitHub Pages, whether that's a glass contractor in the GTA or a pharmacy that needs WCAG-compliant accessibility.
 <div align="center">
 <p>
 <img src="https://img.shields.io/badge/Lab_Writeups-116-9ece6a?style=for-the-badge&labelColor=1a1b26" alt="116 labs" />
@@ -46,67 +60,45 @@ Lab write-ups
 
 <h2>Career Highlights</h2>
 </div>
-Cut SOC alert MTTR by 25%: mapped the end-to-end triage workflow across Splunk and AlienVault, found 3 bottlenecks, and shipped automated enrichment pipelines.
-Automated 30+ daily security alerts with Python scripts and Splunk SPL correlation that eliminate false positives with minimal human intervention.
-Apply cyber threat intelligence to physical infrastructure at Microsoft: auditing server racks, cabling, and Layer 1 for rogue devices, and executing firmware remediations driven by active IoCs.
-Building an 11-project defence hardware program: receive-only passive radar scored against ADS-B truth, a ROS 2 GPS-denied rover with EKF drift measurements, a thermal SAR drone, and a cold-soak battery rig producing a public dataset.
-Built a 7-node bare-metal Kubernetes cluster with VLAN segmentation, Calico CNI, MetalLB, Longhorn storage, and Prometheus + Grafana observability, all on consumer hardware.
-Kept healthcare systems at 99%+ uptime by architecting a VLAN-segmented network and documenting data flows for compliance at CardiOCare.
-Eliminated 100% of public IP exposure with a 3-node Proxmox HA cluster behind Cloudflare Tunnel, Tailscale fallback, and automated 30-day ZFS snapshot retention.
+Highlight
+Cut SOC alert MTTR by 25% by mapping the Splunk/AlienVault triage workflow and shipping automated enrichment pipelines
+Automated 30+ daily security alerts with Python and Splunk SPL correlation, cutting false positives with minimal human input
+Apply cyber threat intelligence to physical infrastructure at Microsoft: rack, cabling, and Layer 1 audits plus IoC-driven firmware remediations
+Building an 11-project defence hardware program: passive radar scored vs ADS-B truth, GPS-denied rover EKF, thermal SAR drone, cold-soak battery dataset
+Built a 7-node bare-metal Kubernetes cluster (Calico, MetalLB, Longhorn, Prometheus/Grafana) on consumer hardware
+Kept healthcare systems at 99%+ uptime with a VLAN-segmented network and compliance documentation at CardiOCare
+Eliminated 100% of public IP exposure with a 3-node Proxmox HA cluster behind Cloudflare Tunnel and Tailscale fallback
 <div align="center">
 
 <h2>Flagship Infrastructure &amp; Security Projects</h2>
 </div>
-<table>
-<tr>
-<td valign="top" width="50%">
+Project
+What it is
+Stack
 7-Node Bare-Metal Kubernetes Cluster
-Production-grade K8s across 3 desktop PCs and 4 laptops on a Proxmox/kubeadm base, with VLAN-segmented networking (Mgmt/Cluster/Storage), Calico CNI and NetworkPolicy, MetalLB for bare-metal LoadBalancers, Longhorn for 3x-replicated storage, and a Prometheus + Grafana + Loki observability stack. Hosts every other self-hosted service in production.
-<br>Kubernetes Calico MetalLB Longhorn Prometheus Grafana Proxmox
-</td>
-<td valign="top" width="50%">
+Production K8s on 3 desktops + 4 laptops: VLAN-segmented networking, Calico + NetworkPolicy, MetalLB LoadBalancers, 3x-replicated Longhorn storage, Prometheus/Grafana/Loki observability
+Kubernetes, Calico, MetalLB, Longhorn, Prometheus, Grafana, Proxmox
 TYF-AI: Self-Hosted Local AI Security Platform
-Hardened local inference stack that treats the model runtime as an untrusted workload: llama.cpp with CUDA behind an authenticated Caddy reverse proxy, per-model Firejail sandboxing (--net=none), SHA-256-pinned GGUF weights, and GPU passthrough on Proxmox. STRIDE-modeled end to end. Serves 50+ concurrent queries at sub-2s latency with zero external AI API calls.
-<br>llama.cpp CUDA Caddy Firejail Proxmox GPU Passthrough
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
+Hardened local inference: llama.cpp + CUDA behind authenticated Caddy, per-model Firejail sandboxing, SHA-256-pinned GGUF weights, GPU passthrough; 50+ concurrent queries at sub-2s latency
+llama.cpp, CUDA, Caddy, Firejail, Proxmox
 Proxmox VE Zero-Trust Private Cloud
-3-node Proxmox VE HA cluster on Ceph with four trust-tiered VLANs and zero public ingress. The only path in is a policy-gated Cloudflare Tunnel, with a Tailscale mesh as authenticated fallback. Automated hourly/daily/30-day ZFS snapshots via sanoid/syncoid. Eliminated 100% of public IP exposure at sub-50ms global tunnel latency.
-<br>Proxmox VE Ceph Cloudflare Tunnel Tailscale ZFS
-</td>
-<td valign="top" width="50%">
+3-node HA cluster on Ceph, four trust-tiered VLANs, zero public ingress via Cloudflare Tunnel with Tailscale fallback, automated ZFS snapshots
+Proxmox VE, Ceph, Cloudflare Tunnel, Tailscale, ZFS
 Data Sovereignty & Secure Media Stack
-Nextcloud AIO and Immich replacing Google Drive/Photos entirely, running on a zstd-compressed BTRFS pool across external SSDs with per-user ACL isolation. A 3-2-1 backup pipeline (local BTRFS snapshot → BorgBase → rsync.net) has run with zero data-loss events, at ~2.5 Gbps sustained read/write.
-<br>Nextcloud Immich BTRFS BorgBase rsync.net
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-Chakor: Self-Hosted AI Workspace · MIT, open source
-A Next.js 15 / TypeScript AI workspace you run on your own hardware: local engines (llama.cpp, Ollama, LM Studio) or your own cloud keys, one-tap model switching, hardware-aware FITS/TIGHT/TOO BIG fit tagging to prevent OOM loads, in-app GGUF downloads from Hugging Face, web search, document chat, blind model A/B compare, and cross-conversation memory, all in a local SQLite store with no telemetry.
-<br>Next.js 15 TypeScript SQLite llama.cpp Ollama
-</td>
-<td valign="top" width="50%">
+Nextcloud AIO + Immich replacing Drive/Photos on zstd BTRFS with per-user ACLs; 3-2-1 backup (BTRFS to BorgBase to rsync.net), zero data-loss events
+Nextcloud, Immich, BTRFS, BorgBase, rsync.net
+Chakor: Self-Hosted AI Workspace (MIT)
+Next.js 15 workspace for local engines or your own cloud keys: model fit tagging, in-app GGUF downloads, web search, doc chat, blind A/B compare, local SQLite, no telemetry
+Next.js 15, TypeScript, SQLite, llama.cpp, Ollama
 Chakor: Custom 7B LLM from Scratch
-A ~7B-parameter decoder-only transformer (32 layers, 32 heads, 4096 hidden dim) written and trained from random initialization in PyTorch, with attention, RoPE, RMSNorm, and the training loop all hand-built. Pretrained on a 100B+ token curated corpus via distributed multi-GPU DDP, instruction-tuned, then converted to GGUF and served 24/7 through a custom SSE-streaming llama.cpp front end.
-<br>PyTorch Distributed Training GGUF llama.cpp Next.js
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
+~7B decoder-only transformer hand-built in PyTorch (RoPE, RMSNorm), pretrained on 100B+ tokens via DDP, instruction-tuned, served as GGUF 24/7
+PyTorch, DDP, GGUF, llama.cpp, Next.js
 Automated SOC Pipeline
-Wazuh detections wired into TheHive case management with MISP threat-intel enrichment; custom detection rules tagged to MITRE ATT&CK technique IDs, with automated active response blocking brute-force sources.
-<br>Wazuh TheHive Cortex MISP MITRE ATT&CK
-</td>
-<td valign="top" width="50%">
+Wazuh detections into TheHive with MISP enrichment, MITRE ATT&CK-tagged rules, automated active response
+Wazuh, TheHive, Cortex, MISP
 Active Directory Threat Hunting Lab
-Instrumented an AD forest with Sysmon and Splunk; hunted Kerberoasting, Pass-the-Hash, and Golden Ticket attacks, with a honeypot SPN account deployed for high-fidelity early warning. Detected PtH within 2 minutes and mapped 15+ lateral-movement paths to Domain Admin.
-<br>BloodHound Sysmon Splunk Kerberos Threat Hunting
-</td>
-</tr>
-</table>
+AD forest instrumented with Sysmon + Splunk; hunted Kerberoasting, PtH, Golden Ticket; honeypot SPN; PtH detected in 2 minutes
+BloodHound, Sysmon, Splunk, Kerberos
 <div align="center">
 
 <h2>From the Workbench</h2>
@@ -129,33 +121,30 @@ CIS-benchmark audits of AWS and Azure with Prowler and ScoutSuite
 <h2>Canadian Defence Hardware Program</h2>
 </div>
 Eleven active sensor and robotics builds across sky, water, and ground, each mapped to a stated requirement from Canada's Defence Drone Initiative or the Army's MINERVA challenges, with full parts lists, prices, and step-by-step build guides. Program hub →
-<table>
-<tr>
-<td valign="top" width="50%">
+Build
+Description
+Stack
 Sky: Passive Aerial Early-Warning Node
-Receive-only passive radar on a KrakenSDR with pyAPRiL processing, scored against an ADS-B ground-truth receiver.
-<br>KrakenSDR pyAPRiL RTL-SDR ADS-B MQTT
+Receive-only passive radar on KrakenSDR with pyAPRiL, scored vs ADS-B ground truth
+KrakenSDR, pyAPRiL, RTL-SDR, ADS-B, MQTT
 Water: Passive Acoustic Vessel Monitor
-Solar hydrophone node classifying vessels by acoustic signature, validated against AIS ground truth.
-<br>Hydrophone Beamforming GCC-PHAT AIS Solar
+Solar hydrophone node classifying vessels by acoustic signature, validated vs AIS
+Hydrophone, Beamforming, GCC-PHAT, AIS, Solar
 Ground: Seismic & Acoustic Perimeter Mesh
-Solar ESP32 LoRa nodes (915 MHz) telling vehicles from footsteps with on-edge classification.
-<br>ESP32 LoRa Mesh Edge ML Seismic
-</td>
-<td valign="top" width="50%">
+Solar ESP32 LoRa nodes (915 MHz) telling vehicles from footsteps at the edge
+ESP32, LoRa Mesh, Edge ML, Seismic
 GPS-Denied Navigation Rover + Convoy Mesh
-ROS 2 EKF navigation (robot_localization, LiDAR, BNO085 IMU) with the GNSS cut, plus convoy robots that survive degraded links.
-<br>ROS 2 EKF LiDAR ArduPilot Zenoh
-Thermal Search-and-Rescue Drone + Drone Detector
-ArduPilot/Pixhawk build with FLIR Lepton thermal and Hailo HAT+ edge AI for the MINERVA Arctic ISR gap, plus a passive acoustic counter-drone detector.
-<br>ArduPilot FLIR Lepton Hailo MAVLink
+ROS 2 EKF navigation (LiDAR, BNO085 IMU) with GNSS cut, plus convoy robots on degraded links
+ROS 2, EKF, LiDAR, ArduPilot, Zenoh
+Thermal SAR Drone + Drone Detector
+ArduPilot/Pixhawk FLIR Lepton + Hailo HAT+ edge AI for the MINERVA Arctic ISR gap, plus passive acoustic counter-drone detector
+ArduPilot, FLIR Lepton, Hailo, MAVLink
 Cold-Soak Battery Rig + Secure Fleet Updates
-Cold-weather battery dataset (runtime, voltage sag, failure mode vs temperature) and TPM 2.0 signed OTA updates for supply-chain integrity.
-<br>TPM 2.0 Secure Boot Signed OTA Ed25519
-</td>
-</tr>
-</table>
-Everything feeds a Multi-Domain Common Operating Picture: MQTT/Zenoh transport, Kalman-filter sensor fusion, and Ed25519-signed tracks on the Kubernetes cluster.
+Cold-weather battery dataset (runtime, sag, failure vs temp) and TPM 2.0 signed OTA with A/B rollback
+TPM 2.0, Secure Boot, Signed OTA, Ed25519
+Fusion layer
+Multi-Domain Common Operating Picture: MQTT/Zenoh transport, Kalman-filter sensor fusion, Ed25519-signed tracks on Kubernetes
+MQTT, Zenoh, Kalman, Ed25519
 <details>
 <summary><strong>Six completed software defence builds (click to expand)</strong></summary>
 <br>
@@ -209,79 +198,66 @@ Arch Linux + XFCE via WSL2, no port forwarding
 
 <h2>Professional Experience</h2>
 </div>
-<table>
-<tr>
-<td valign="top" width="50%">
-Data Center Engineer · Microsoft
-Sep 2025 – Present · Contract · Markham, ON
-Apply cyber threat intelligence (CTI) to physical infrastructure: audit server racks, cabling, and network gear for anomalies, rogue devices, and unauthorized Layer 1 connections.
-Execute urgent firmware updates and hardware remediations on bare-metal servers driven by active IoCs and threat feeds.
-Incident Analyst · Felixous Technology Inc.
-Nov 2025 – Present · North York, ON
-Monitor security systems and databases; triage alerts and escalate events per defined SOPs.
-Mapped the SOC triage workflow across Splunk and AlienVault; shipped automated enrichment pipelines that cut MTTR by 25%.
-Built Python and Splunk SPL automation processing 30+ daily alerts with minimal human intervention.
-Cloud Support Engineer (Intern) · Microsoft
-May 2025 – Sep 2025 · Toronto, ON
-Provided cloud support engineering for Azure-based enterprise customers from Dominion Centre, 222 Bay St.
-Diagnosed infrastructure, networking, and identity issues across Microsoft cloud environments.
-Network Analyst Intern · CardiOCare
-Jan 2025 – Sep 2025 · Hybrid
-Architected a VLAN-segmented network maintaining 99%+ uptime for healthcare systems; documented data flows for compliance.
-Performed Wireshark packet analysis and IDS traffic monitoring to detect anomalies and support incident investigations.
-</td>
-<td valign="top" width="50%">
-IT Help Desk Analyst · TD
-Oct 2024 – Jan 2025 · Contract, Part-time
-Managed the end-to-end lifecycle of IT support tickets in ServiceNow under strict enterprise SLAs.
-Troubleshot Tier 1/Tier 2 software, hardware, and connectivity issues in a highly secure, regulated banking environment.
-Server Operator (Junior) · Fiera Foods
-Jun 2024 – Jul 2025 · Contract, Part-time
-Managed server alerts on Linux and Windows Server with priority-based response; verified backups, applied patches, and built runbooks.
-Built Terraform modules with GitHub Actions for self-service Azure provisioning; administered Entra ID IAM, RBAC, and Conditional Access.
-Surveillance Operator / Help Desk · Elite Force / Rogers Centre
-Sep 2022 – Nov 2023 · Contract, Part-time
-Monitored multi-camera CCTV and IP surveillance systems, ensuring 24/7 security coverage and rapid escalation of verified threats.
-Surveillance Operator · Elite Security
-Jan 2022 – Apr 2023 · Contract, Part-time
-Monitored CCTV systems and performed regular property inspections across commercial facilities.
-Executive Editor · IKU Digital
-Feb 2021 – Dec 2023 · Full-time
-Directed digital publication operations: databases, administration, and digital content management.
-</td>
-</tr>
-</table>
+Role
+Organization
+Period
+Key work
+Data Center Engineer (Contract)
+Microsoft, Markham ON
+Sep 2025 – Present
+CTI applied to physical infrastructure: rack, cabling, and Layer 1 audits; IoC-driven firmware remediations on bare metal
+Incident Analyst
+Felixous Technology Inc., North York ON
+Nov 2025 – Present
+SOC triage across Splunk and AlienVault; enrichment pipelines cutting MTTR 25%; Python/SPL automation for 30+ daily alerts
+Cloud Support Engineer (Intern)
+Microsoft, Toronto ON
+May 2025 – Sep 2025
+Azure enterprise support: diagnosed infrastructure, networking, and identity issues
+Network Analyst Intern
+CardiOCare (Hybrid)
+Jan 2025 – Sep 2025
+VLAN-segmented network at 99%+ uptime; Wireshark and IDS analysis; compliance documentation
+IT Help Desk Analyst (Contract, Part-time)
+TD
+Oct 2024 – Jan 2025
+ServiceNow ticket lifecycle under enterprise SLAs; Tier 1/2 troubleshooting in a regulated bank
+Server Operator, Junior (Contract, Part-time)
+Fiera Foods
+Jun 2024 – Jul 2025
+Linux/Windows server alerts and patching; Terraform + GitHub Actions Azure provisioning; Entra ID IAM and RBAC
+Surveillance Operator / Help Desk (Contract)
+Elite Force / Rogers Centre
+Sep 2022 – Nov 2023
+Multi-camera CCTV and IP surveillance, 24/7 coverage, rapid escalation of verified threats
+Surveillance Operator (Contract)
+Elite Security
+Jan 2022 – Apr 2023
+CCTV monitoring and property inspections across commercial facilities
+Executive Editor (Full-time)
+IKU Digital
+Feb 2021 – Dec 2023
+Directed digital publication operations: databases, administration, content management
 <div align="center">
 
 <h2>Web Development Portfolio</h2>
 </div>
 Responsive, accessibility-first business websites built from client brief through deployment on GitHub Pages.
-<table>
-<tr>
-<td valign="top" width="50%">
+Project
+Description
+Stack
 GTA High Glass
-Multi-page site for a glass and glazing contractor in the GTA. Services showcase, filterable project gallery with CSS Grid auto-fill and aspect-ratio locking, and a quote request form. Mobile-first, WebP-optimized, with Safari-specific hero fixes.
-<br>HTML5 CSS3 CSS Grid Flexbox Responsive
+Glass and glazing contractor site: filterable project gallery (CSS Grid auto-fill), quote form, mobile-first, WebP, Safari hero fixes
+HTML5, CSS3, CSS Grid, Flexbox
 Hakimi Fruits
-Online presence for a local fruit and produce business: seasonal highlights, product listings filterable by category (citrus, berries, tropical) via data-* attributes, and an order inquiry form. CSS Grid auto-fill for responsive product cards.
-<br>HTML5 CSS3 JavaScript E-commerce
-HomeBound Aisha · ★ 4 GitHub stars
-Multi-page site for a home-based cleaning and domestic service provider: landing, services with pricing tiers, about/trust signals, and a validated enquiry form. BEM naming, ARIA labels, and focus management for accessible navigation.
-<br>HTML5 CSS3 JavaScript Accessibility GitHub Pages
-</td>
-<td valign="top" width="50%">
+Produce business site: seasonal highlights, category-filterable listings, order inquiry form
+HTML5, CSS3, JavaScript
+HomeBound Aisha (4 GitHub stars)
+Cleaning service site: landing, pricing tiers, trust signals, validated enquiry form; BEM, ARIA, focus management
+HTML5, CSS3, JavaScript, Accessibility
 Pharmacy Website
-Accessibility-first medical/pharmacy site built to WCAG AA contrast standards (4.5:1 minimum). Live product search with aria-live announcements, schema.org structured data for SEO, full keyboard navigation, and a responsive Google Maps embed.
-<br>HTML5 CSS3 JavaScript WCAG AA Healthcare
-GateArch
-Student portal and course-management system with full CRUD for courses, students, and enrollment tracking.
-<br>PHP MySQL JavaScript
-TaxGlobe
-Multi-jurisdiction tax calculator handling federal and provincial brackets with real-time computation and dynamic output rendering.
-<br>JavaScript HTML CSS
-</td>
-</tr>
-</table>
+WCAG AA pharmacy site: live search with aria-live, schema.org SEO, keyboard navigation, responsive Maps embed
+HTML5, CSS3, JavaScript, WCAG AA
 <div align="center">
 
 <h2>Complete Project Index</h2>
@@ -404,10 +380,12 @@ Languages & Data
 </tr>
 </table>
 <div align="center">
-SOC / Security Tooling
-Splunk AlienVault Wireshark Nmap Metasploit Burp Suite Wazuh TheHive Cortex MISP BloodHound Sysmon YARA nftables
-Defence Hardware & Robotics
-KrakenSDR RTL-SDR pyAPRiL ROS 2 ArduPilot/Pixhawk ESP32 + LoRa Hailo HAT+ FLIR Lepton MAVLink MQTT/Zenoh Kalman Fusion TPM 2.0
+Area
+Tools
+SOC and security
+Splunk, AlienVault, Wireshark, Nmap, Metasploit, Burp Suite, Wazuh, TheHive, Cortex, MISP, BloodHound, Sysmon, YARA, nftables
+Defence hardware and robotics
+KrakenSDR, RTL-SDR, pyAPRiL, ROS 2, ArduPilot/Pixhawk, ESP32 + LoRa, Hailo HAT+, FLIR Lepton, MAVLink, MQTT/Zenoh, Kalman fusion, TPM 2.0
 
 <h2>Certifications</h2>
 <p>25+ active certifications across security, cloud, and networking. Full list at <a href="https://tyfsadik.org/resume.html">tyfsadik.org/resume.html</a>.</p>
