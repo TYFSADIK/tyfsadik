@@ -284,6 +284,107 @@ Multi-jurisdiction tax calculator handling federal and provincial brackets with 
 </table>
 <div align="center">
 
+<h2>Complete Project Index</h2>
+</div>
+Every build documented on tyfsadik.org, with full write-ups, parts lists, and code.
+<details>
+<summary><strong>Defence projects (18) (click to expand)</strong></summary>
+<br>
+Project
+Description
+Canadian Defence Hardware Program
+Program hub: all 11 hardware builds with BOMs, prices, and step-by-step guides
+Sky: Passive Aerial Early-Warning Node
+Receive-only KrakenSDR passive radar with pyAPRiL, scored against ADS-B ground truth
+Water: Passive Acoustic Vessel Monitor
+Solar hydrophone node classifying vessels by acoustic signature, validated against AIS
+Ground: Seismic and Acoustic Perimeter Mesh
+Solar ESP32 LoRa mesh telling vehicles from footsteps with on-edge classification
+GPS-Denied Navigation Rover
+ROS 2 EKF rover on wheel odometry, BNO085 IMU, and 2D LiDAR with the GNSS cut
+Convoy-Following Robots on a Degraded Mesh
+Rover convoy holding formation through induced LoRa and Wi-Fi link drops
+Passive Acoustic Drone Detector
+MEMS microphone array detecting rotor harmonics with beamforming direction finding
+Thermal Search-and-Rescue Drone
+ArduPilot quad with FLIR Lepton thermal and Hailo AI HAT+ for the MINERVA Arctic ISR gap
+Cold-Soak Battery Characterization Rig
+Drone battery runtime, voltage sag, and failure modes vs temperature as a public dataset
+Secure Robot-Fleet Updates
+TPM 2.0 measured boot, YubiKey-signed OTA updates, and automatic A/B rollback
+Mini Airspace Deconfliction Manager
+ESP32 tracker beacons plus ArduPilot SITL drones with 3D geofences and human override
+Multi-Domain Common Operating Picture
+Kalman-fused air, water, and ground tracks over MQTT/Zenoh with signed detections
+Arctic Domain Awareness Digital Twin
+ADS-B, AIS, and Sentinel-1 fusion flagging dark vessels over Canada's North
+DDIL-Proof DevOps
+Store-and-forward CI/CD and telemetry that survive denied and degraded links
+Counter-Drone Sensor Fusion Simulator
+Synthetic radar, RF, acoustic, and camera tracks with Kalman fusion and human triage
+Decision Black Box
+Hash-chained, Ed25519-signed audit log with replay and OPA policy checks
+Zero-Trust Air-Gapped Supply Chain
+SBOM, sigstore signing, and reproducible builds across a simulated one-way transfer
+Operation LENTUS-Style Drone Mapping
+Simulated disaster-response flights with edge computer vision and OR-Tools routing
+</details>
+<details>
+<summary><strong>Infrastructure projects (14) (click to expand)</strong></summary>
+<br>
+Project
+Description
+Kubernetes Infrastructure
+7-node bare-metal K8s with Calico, MetalLB, Longhorn, and Prometheus plus Grafana
+TYF-AI: Self-Hosted Local AI Security Platform
+Hardened llama.cpp inference with CUDA, authenticated Caddy proxy, and Firejail sandboxing
+Proxmox VE Zero-Trust Private Cloud
+3-node HA cluster on Ceph with zero public ingress via Cloudflare Tunnel
+Data Sovereignty and Secure Media Stack
+Nextcloud plus Immich on BTRFS with 3-2-1 backup to BorgBase and rsync.net
+Chakor: Self-Hosted AI Workspace
+MIT-licensed Next.js AI workspace for local models with no telemetry
+Private AI Model
+Self-hosted LLM with web search at ai.tyfsadik.org and no cloud subscriptions
+Proxmox Homelab
+Full KVM and LXC virtualization stack for servers, VMs, and network testing
+Self-Hosted DNS
+Pi-hole plus Unbound for network-wide ad blocking and recursive resolution
+Private Email Server
+Postfix plus Dovecot SMTP and IMAP on @tyfsadik.org with DKIM
+Self-Hosted Cloud Storage
+Private Nextcloud instance replacing Google Drive across all devices
+Self-Hosted Photo Server
+Immich photo management with ML face recognition and mobile auto-backup
+Public Search Engine
+SearXNG meta-search at search.tyfsadik.org with no tracking
+Public Wiki Server
+Full Kiwix Wikipedia mirror at wiki.tyfsadik.org
+Arch Linux Remote Desktop via WSL2
+Arch plus XFCE remote desktop over WSL2 with no router port forwarding
+</details>
+<details>
+<summary><strong>Applications (3) (click to expand)</strong></summary>
+<br>
+Project
+Description
+GateArch
+Student portal and course-management system with full CRUD and authentication
+TaxGlobe
+Multi-jurisdiction tax calculator with real-time federal and provincial breakdowns
+Wonder Learning
+E-learning platform with course listings and embedded video
+</details>
+<details>
+<summary><strong>Games (1) (click to expand)</strong></summary>
+<br>
+Project
+Description
+Depot Gato
+2D tower defense game in Godot with wave spawning, placement mechanics, and pixel art
+</details>
+<div align="center">
+
 <h2>Technical Skills</h2>
 </div>
 <table>
