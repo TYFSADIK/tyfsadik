@@ -146,6 +146,7 @@ One live picture fusing every air, water and ground sensor, with signed detectio
 
 | Project | What it is | Stack |
 | --- | --- | --- |
+| [Daru: Self-Hosted Log Analytics and SIEM](https://tyfsadik.org/work/infrastructure/daru.html) | Open-source SIEM in one Go binary plus ClickHouse: pipe-language log search, dashboards, alerts, incident triage, syslog, an append-only audit trail and live packet capture ([source](https://github.com/TYFSADIK/daru)) | Go, ClickHouse, tshark, Docker |
 | [OSINT Recon Dashboard](https://github.com/TYFSADIK/osint-recon-dashboard) | FastAPI dashboard wrapping 22 security and recon tools with SQLite storage | Python, FastAPI, SQLite |
 | [Automated SOC Pipeline](https://tyfsadik.org/blog/labs/security/automated-soc-pipeline.html) | Wazuh detections into TheHive with MISP enrichment, MITRE ATT&CK-tagged rules and automated active response | Wazuh, TheHive, Cortex, MISP |
 | Active Directory Threat Hunting Lab | AD forest instrumented with Sysmon and Splunk; hunted Kerberoasting, PtH and Golden Ticket; PtH detected in 2 minutes | BloodHound, Sysmon, Splunk |
