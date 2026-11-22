@@ -22,7 +22,7 @@
 <br>
 
 I'm **Taki Sadik**. I build things to understand how they break: open-source defence hardware built
-against real Canadian requirements, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
+against real Canadian requirements, working testbeds shaped by four DND digital projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
 model trained from scratch, and tools people use every day. Every project is open, documented and
 honest about what works and what doesn't yet.
 
@@ -258,12 +258,13 @@ Keycloak MFA, OpenBao certificates and OPA policy for 300 people across web, ser
 | EASY Framework for Threat Intelligence | AttackIQ | Mar 2026 |
 | Introduction to Model Context Protocol | Anthropic | Mar 2026 |
 | Cisco Routing Course | APNIC Academy | exp. Mar 2029 |
-| ISC2 Candidate (CC) | ISC2 | exp. Aug 2026 |
+| ISC2 Candidate (CC) | ISC2 | Expired Aug 2026 |
 | Diploma in Ethical Hacking | Alison | Mar 2026 |
 | Computer Networks and Network Security | IBM iX | Apr 2026 |
 | MSSQL Certification | Microsoft | Active |
 | CCNA Fundamentals | Cisco Networking Academy | Active |
-| CompTIA Security+ | CompTIA | In Progress |
+| CompTIA Security+ | CompTIA | Active |
+| CISSP | ISC2 | In Progress |
 
 Full list at [tyfsadik.org/resume.html](https://tyfsadik.org/resume.html).
 
