@@ -4,7 +4,7 @@
 <img width="1942" height="809" alt="Home_Lab" src="https://github.com/user-attachments/assets/79faa19f-81db-4697-9a06-a03246f5c348" />
 
 <a href="https://tyfsadik.org">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Engineering+%26+Threat+Detection;23+Open-Source+Defence+Hardware+Builds;7-Node+Bare-Metal+K8s+%26+Zero-Trust+Homelab;Ad+Blocking+for+Mobile+Chrome;Building+Things+to+Learn+How+They+Break" alt="specializations" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Engineering+%26+Threat+Detection;23+Open-Source+Defence+Hardware+Builds;4+Testbeds+Shaped+by+DND+Projects;7-Node+Bare-Metal+K8s+%26+Zero-Trust+Homelab;Ad+Blocking+for+Mobile+Chrome;Building+Things+to+Learn+How+They+Break" alt="specializations" />
 </a>
 
 <p>
@@ -32,6 +32,7 @@ honest about what works and what doesn't yet.
 
 <img src="https://img.shields.io/badge/Open_Source_Builds-25+-9ece6a?style=for-the-badge&labelColor=1a1b26" alt="25 plus open source builds" />
 <img src="https://img.shields.io/badge/Defence_Builds-23-bb9af7?style=for-the-badge&labelColor=1a1b26" alt="23 defence builds" />
+<img src="https://img.shields.io/badge/DND_Project_Testbeds-4-f7768e?style=for-the-badge&labelColor=1a1b26" alt="4 DND project testbeds" />
 <img src="https://img.shields.io/badge/Lab_Writeups-116-7aa2f7?style=for-the-badge&labelColor=1a1b26" alt="116 labs" />
 <img src="https://img.shields.io/badge/Self_Hosted_Services-9-e0af68?style=for-the-badge&labelColor=1a1b26" alt="9 self hosted services" />
 
@@ -130,6 +131,47 @@ One live picture fusing every air, water and ground sensor, with signed detectio
 | Trust | [Sovereign AI and Data Enclave](https://github.com/TYFSADIK/sovereign-ai-enclave) | A private AI enclave where every answer respects clearance labels | Planned 2027 |
 
 </details>
+
+## Testbeds Shaped by DND Projects
+
+National Defence publishes what its digital projects must deliver. I take four of those descriptions and
+build a working, open-source version at lab scale, and publish what it does, what testing found and
+what is not built yet. Independent research: not affiliated with or submitted to DND or the CAF.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/TYFSADIK/cd-dar-testbed"><img src="https://tyfsadik.org/images/projects/cddar-cycop-mockup.jpg" alt="CD-DAR AI-assisted SOC testbed" /></a>
+<b><a href="https://github.com/TYFSADIK/cd-dar-testbed">CD-DAR: AI-Assisted SOC</a></b><br>
+Zeek, Suricata and Wazuh into one OCSF data repository, incident correlation, a local LLM whose every
+cited piece of evidence is checked, and response that runs only when an analyst approves it.
+(<a href="https://tyfsadik.org/work/defence/cyber-defence-decision-analysis-response">page</a>)
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/TYFSADIK/avedlek-groundstation"><img src="https://raw.githubusercontent.com/TYFSADIK/avedlek-groundstation/main/docs/img/avedlek-dashboard.jpg" alt="AVEDLEK satellite ground station testbed" /></a>
+<b><a href="https://github.com/TYFSADIK/avedlek-groundstation">AVEDLEK: Northern Satellite Ground Station</a></b><br>
+Pass prediction, telemetry decoding and fault detection: all 5 faults caught in 150 runs with no false
+alarms, and 2,814 of 2,814 spoofed frames stopped.
+(<a href="https://tyfsadik.org/work/defence/avedlek-northern-groundstation">page</a>)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/TYFSADIK/iti-c2-testbed"><img src="https://raw.githubusercontent.com/TYFSADIK/iti-c2-testbed/main/docs/img/itic2-dashboard.jpg" alt="ITI C2 three-site infrastructure testbed" /></a>
+<b><a href="https://github.com/TYFSADIK/iti-c2-testbed">ITI C2: Three-Site Resilient Infrastructure</a></b><br>
+K3s, Longhorn and CloudNativePG across sites with a witness that fails over safely: a whole site lost
+and service back in 94 s, with no acknowledged write lost in any test.
+(<a href="https://tyfsadik.org/work/defence/it-infrastructure-command-control">page</a>)
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/TYFSADIK/icam-testbed"><img src="https://raw.githubusercontent.com/TYFSADIK/icam-testbed/main/docs/img/icam-dashboard.jpg" alt="ICAM identity and access testbed" /></a>
+<b><a href="https://github.com/TYFSADIK/icam-testbed">ICAM: Identity, Credentials and Access</a></b><br>
+Keycloak MFA, OpenBao certificates and OPA policy for 300 people across web, servers and badge doors:
+390 of 390 decisions correct, and a leaver loses access in under a second.
+(<a href="https://tyfsadik.org/work/defence/identity-credential-access-management">page</a>)
+</td>
+</tr>
+</table>
 
 ## Infrastructure and AI
 
