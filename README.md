@@ -276,10 +276,12 @@ Full list at [tyfsadik.org/resume.html](https://tyfsadik.org/resume.html).
 
 31 DNS records across `tyfsadik.org`, all behind Cloudflare Tunnels. No homelab service exposes a public port.
 
-<img src="https://img.shields.io/badge/Requests-296K-7aa2f7?style=flat-square&labelColor=1a1b26" alt="296k requests" />
-<img src="https://img.shields.io/badge/Visits-101K-9ece6a?style=flat-square&labelColor=1a1b26" alt="101k visits" />
-<img src="https://img.shields.io/badge/Countries-113-e0af68?style=flat-square&labelColor=1a1b26" alt="113 countries" />
-<img src="https://img.shields.io/badge/TLS_1.3-65.8%25-bb9af7?style=flat-square&labelColor=1a1b26" alt="65.8% TLS 1.3" />
+<img src="https://img.shields.io/badge/Requests-78.3M-7aa2f7?style=flat-square&labelColor=1a1b26" alt="78.3M requests" />
+<img src="https://img.shields.io/badge/Visits-29.65M-9ece6a?style=flat-square&labelColor=1a1b26" alt="29.65M visits" />
+<img src="https://img.shields.io/badge/Data_served-570_GB-e0af68?style=flat-square&labelColor=1a1b26" alt="570 GB served" />
+<img src="https://img.shields.io/badge/HTTP%2F2-56%25-bb9af7?style=flat-square&labelColor=1a1b26" alt="56% HTTP/2" />
+
+<sub>Cloudflare totals, November 2026. Almost all of it is the public Wikipedia mirror at <code>wiki.tyfsadik.org</code>, much of it from search and AI crawlers.</sub>
 
 </div>
 
