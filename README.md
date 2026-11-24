@@ -4,7 +4,7 @@
 <img width="1942" height="809" alt="Home_Lab" src="https://github.com/user-attachments/assets/79faa19f-81db-4697-9a06-a03246f5c348" />
 
 <a href="https://tyfsadik.org">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Engineering+%26+Threat+Detection;23+Open-Source+Defence+Hardware+Builds;4+Testbeds+Shaped+by+DND+Projects;7-Node+Bare-Metal+K8s+%26+Zero-Trust+Homelab;Ad+Blocking+for+Mobile+Chrome;Building+Things+to+Learn+How+They+Break" alt="specializations" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Engineering+%26+Threat+Detection;23+Open-Source+Defence+Hardware+Builds;5+Testbeds+Shaped+by+DND+Projects;7-Node+Bare-Metal+K8s+%26+Zero-Trust+Homelab;Ad+Blocking+for+Mobile+Chrome;Building+Things+to+Learn+How+They+Break" alt="specializations" />
 </a>
 
 <p>
@@ -22,7 +22,7 @@
 <br>
 
 I'm **Taki Sadik**. I build things to understand how they break: open-source defence hardware built
-against real Canadian requirements, working testbeds shaped by four DND digital projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
+against real Canadian requirements, working testbeds shaped by five DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
 model trained from scratch, and tools people use every day. Every project is open, documented and
 honest about what works and what doesn't yet.
 
@@ -32,7 +32,7 @@ honest about what works and what doesn't yet.
 
 <img src="https://img.shields.io/badge/Open_Source_Builds-25+-9ece6a?style=for-the-badge&labelColor=1a1b26" alt="25 plus open source builds" />
 <img src="https://img.shields.io/badge/Defence_Builds-23-bb9af7?style=for-the-badge&labelColor=1a1b26" alt="23 defence builds" />
-<img src="https://img.shields.io/badge/DND_Project_Testbeds-4-f7768e?style=for-the-badge&labelColor=1a1b26" alt="4 DND project testbeds" />
+<img src="https://img.shields.io/badge/DND_Project_Testbeds-5-f7768e?style=for-the-badge&labelColor=1a1b26" alt="5 DND project testbeds" />
 <img src="https://img.shields.io/badge/Lab_Writeups-116-7aa2f7?style=for-the-badge&labelColor=1a1b26" alt="116 labs" />
 <img src="https://img.shields.io/badge/Self_Hosted_Services-9-e0af68?style=for-the-badge&labelColor=1a1b26" alt="9 self hosted services" />
 
@@ -134,7 +134,7 @@ One live picture fusing every air, water and ground sensor, with signed detectio
 
 ## Testbeds Shaped by DND Projects
 
-National Defence publishes what its digital projects must deliver. I take four of those descriptions and
+National Defence publishes what its projects must deliver. I take five of those descriptions and
 build a working, open-source version at lab scale, and publish what it does, what testing found and
 what is not built yet. Independent research: not affiliated with or submitted to DND or the CAF.
 
@@ -169,6 +169,16 @@ and service back in 94 s, with no acknowledged write lost in any test.
 Keycloak MFA, OpenBao certificates and OPA policy for 300 people across web, servers and badge doors:
 390 of 390 decisions correct, and a leaver loses access in under a second.
 (<a href="https://tyfsadik.org/work/defence/identity-credential-access-management">page</a>)
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<a href="https://github.com/TYFSADIK/case-testbed"><img src="https://raw.githubusercontent.com/TYFSADIK/case-testbed/main/docs/img/case-twin.jpg" alt="CASE synthetic environment and digital twin" /></a>
+<b><a href="https://github.com/TYFSADIK/case-testbed">CASE: Synthetic Environment and Digital Twin</a></b><br>
+A real town rebuilt from OpenStreetMap with 95 virtual sensors, floods, plumes and power cuts, a second training
+site over DIS with dead reckoning, a ROS 2 robot, and a 3D twin that found 10 of 11 sensor faults and all 4 real
+events with no false fault alerts.
+(<a href="https://tyfsadik.org/work/defence/canadian-advanced-synthetic-environment">page</a>)
 </td>
 </tr>
 </table>
