@@ -4,7 +4,7 @@
 <img width="1942" height="809" alt="Home_Lab" src="https://github.com/user-attachments/assets/79faa19f-81db-4697-9a06-a03246f5c348" />
 
 <a href="https://tyfsadik.org">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Engineering+%26+Threat+Detection;23+Open-Source+Defence+Hardware+Builds;6+Testbeds+Shaped+by+DND+Projects;7-Node+Bare-Metal+K8s+%26+Zero-Trust+Homelab;Ad+Blocking+for+Mobile+Chrome;Building+Things+to+Learn+How+They+Break" alt="specializations" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=800&height=45&lines=Security+Engineering+%26+Threat+Detection;23+Open-Source+Defence+Hardware+Builds;8+Testbeds+Shaped+by+DND+Projects;7-Node+Bare-Metal+K8s+%26+Zero-Trust+Homelab;Ad+Blocking+for+Mobile+Chrome;Building+Things+to+Learn+How+They+Break" alt="specializations" />
 </a>
 
 <p>
@@ -22,7 +22,7 @@
 <br>
 
 I'm **Taki Sadik**. I build things to understand how they break: open-source defence hardware built
-against real Canadian requirements, working testbeds shaped by seven DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
+against real Canadian requirements, working testbeds shaped by eight DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
 model trained from scratch, and tools people use every day, like a free beauty and camera-effects
 plugin for OBS on Windows, macOS and Linux. Every project is open, documented and
 honest about what works and what doesn't yet.
@@ -33,7 +33,7 @@ honest about what works and what doesn't yet.
 
 <img src="https://img.shields.io/badge/Open_Source_Builds-25+-9ece6a?style=for-the-badge&labelColor=1a1b26" alt="25 plus open source builds" />
 <img src="https://img.shields.io/badge/Defence_Builds-23-bb9af7?style=for-the-badge&labelColor=1a1b26" alt="23 defence builds" />
-<img src="https://img.shields.io/badge/DND_Project_Testbeds-6-f7768e?style=for-the-badge&labelColor=1a1b26" alt="6 DND project testbeds" />
+<img src="https://img.shields.io/badge/DND_Project_Testbeds-8-f7768e?style=for-the-badge&labelColor=1a1b26" alt="8 DND project testbeds" />
 <img src="https://img.shields.io/badge/Lab_Writeups-116-7aa2f7?style=for-the-badge&labelColor=1a1b26" alt="116 labs" />
 <img src="https://img.shields.io/badge/Self_Hosted_Services-9-e0af68?style=for-the-badge&labelColor=1a1b26" alt="9 self hosted services" />
 
@@ -149,7 +149,7 @@ One live picture fusing every air, water and ground sensor, with signed detectio
 
 ## Testbeds Shaped by DND Projects
 
-National Defence publishes what its projects must deliver. I take seven of those descriptions and
+National Defence publishes what its projects must deliver. I take eight of those descriptions and
 build a working, open-source version at lab scale, and publish what it does, what testing found and
 what is not built yet. Independent research: not affiliated with or submitted to DND or the CAF.
 
@@ -214,6 +214,12 @@ and no false alarms in a fault-free run.
 (<a href="https://tyfsadik.org/work/defence/network-c2-situational-awareness">page</a>)
 </td>
 <td width="50%" valign="top">
+<a href="https://github.com/TYFSADIK/cjim-fusion-testbed"><img src="https://raw.githubusercontent.com/TYFSADIK/cjim-fusion-testbed/main/docs/img/dashboard.png" alt="Multi-source intelligence fusion: an event fused from four sources, with a cited summary and its evidence" /></a>
+<b><a href="https://github.com/TYFSADIK/cjim-fusion-testbed">CJIM: Multi-Source Intelligence Fusion with vLLM</a></b><br>
+Five synthetic sources fused on a laptop with local models on vLLM: copies and clock errors corrected,
+events with provenance and NATO-grading confidence, and cited summaries checked sentence by sentence.
+vLLM reads event types right 92.4% of the time against 64.8% for keyword rules.
+(<a href="https://tyfsadik.org/work/defence/multi-source-intelligence-fusion">page</a>)
 </td>
 </tr>
 </table>
