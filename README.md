@@ -48,7 +48,8 @@ honest about what works and what doesn't yet.
 
 **[Polish for OBS](https://github.com/TYFSADIK/obs-polish)**
 
-Free, open-source beauty and camera effects for OBS Studio: skin smoothing, makeup, face shape,
+Free, open-source beauty and camera effects for OBS Studio: skin smoothing, foundation, soft light,
+makeup with eyeshadow, eyeliner, eyebrows and eye colour, face shaping (jaw, chin, nose, eyes, lips),
 17 colour looks, background blur or replacement and face-tracked stickers, with no watermark.
 Windows, macOS and Linux, in OBS 30 to 33, tested inside a real OBS on every platform.
 
@@ -266,7 +267,7 @@ vLLM reads event types right 92.4% of the time against 64.8% for keyword rules.
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| [Polish for OBS](https://github.com/TYFSADIK/obs-polish) | Beauty and camera-effects plugin for OBS on Windows, macOS and Linux: skin smoothing, makeup, face shape, looks, background blur and stickers ([page](https://tyfsadik.org/work/applications/obs-polish)) | C, ONNX Runtime, MediaPipe, GPU shaders |
+| [Polish for OBS](https://github.com/TYFSADIK/obs-polish) | Beauty and camera-effects plugin for OBS on Windows, macOS and Linux: skin smoothing, foundation, makeup including eye makeup, face shaping, looks, background blur and stickers ([page](https://tyfsadik.org/work/applications/obs-polish)) | C, ONNX Runtime, MediaPipe, GPU shaders |
 | [GateArch](https://github.com/TYFSADIK/gatearch) | Student portal and course-management system with full CRUD and authentication | PHP, MySQL |
 | [TaxGlobe](https://github.com/TYFSADIK/taxglobe) | Multi-jurisdiction tax calculator with real-time federal and provincial breakdowns | JavaScript |
 | [Wonder Learning](https://github.com/TYFSADIK/wonder-learning) | E-learning platform with course listings and embedded video | JavaScript |
