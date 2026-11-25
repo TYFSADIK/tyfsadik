@@ -23,7 +23,8 @@
 
 I'm **Taki Sadik**. I build things to understand how they break: open-source defence hardware built
 against real Canadian requirements, working testbeds shaped by six DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
-model trained from scratch, and tools people use every day. Every project is open, documented and
+model trained from scratch, and tools people use every day, like a free beauty and camera-effects
+plugin for OBS on Windows, macOS and Linux. Every project is open, documented and
 honest about what works and what doesn't yet.
 
 > *I don't fully trust a system until I've tried to break it myself.*
@@ -41,6 +42,20 @@ honest about what works and what doesn't yet.
 ## Featured
 
 <table>
+<tr>
+<td colspan="2" valign="top">
+<a href="https://github.com/TYFSADIK/obs-polish"><img src="https://raw.githubusercontent.com/TYFSADIK/obs-polish/main/docs/img/social-preview.png" alt="Polish for OBS: before and after, skin smoothing, makeup, looks and background blur" /></a>
+
+**[Polish for OBS](https://github.com/TYFSADIK/obs-polish)**
+
+Free, open-source beauty and camera effects for OBS Studio: skin smoothing, makeup, face shape,
+17 colour looks, background blur or replacement and face-tracked stickers, with no watermark.
+Windows, macOS and Linux, in OBS 30 to 33, tested inside a real OBS on every platform.
+
+`C` `GPU shaders` `MediaPipe` `ONNX Runtime` `Apple Vision` `Direct3D 11` `Metal`
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/TYFSADIK/mobile-chrome-adblock"><img src="https://raw.githubusercontent.com/TYFSADIK/mobile-chrome-adblock/main/docs/img/banner.png" alt="Mobile Chrome AdBlock" /></a>
@@ -233,6 +248,7 @@ Canada's GEO satellites.
 
 | Project | What it is | Stack |
 | --- | --- | --- |
+| [Polish for OBS](https://github.com/TYFSADIK/obs-polish) | Beauty and camera-effects plugin for OBS on Windows, macOS and Linux: skin smoothing, makeup, face shape, looks, background blur and stickers ([page](https://tyfsadik.org/work/applications/obs-polish)) | C, ONNX Runtime, MediaPipe, GPU shaders |
 | [GateArch](https://github.com/TYFSADIK/gatearch) | Student portal and course-management system with full CRUD and authentication | PHP, MySQL |
 | [TaxGlobe](https://github.com/TYFSADIK/taxglobe) | Multi-jurisdiction tax calculator with real-time federal and provincial breakdowns | JavaScript |
 | [Wonder Learning](https://github.com/TYFSADIK/wonder-learning) | E-learning platform with course listings and embedded video | JavaScript |
