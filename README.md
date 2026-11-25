@@ -22,7 +22,7 @@
 <br>
 
 I'm **Taki Sadik**. I build things to understand how they break: open-source defence hardware built
-against real Canadian requirements, working testbeds shaped by six DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
+against real Canadian requirements, working testbeds shaped by seven DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
 model trained from scratch, and tools people use every day, like a free beauty and camera-effects
 plugin for OBS on Windows, macOS and Linux. Every project is open, documented and
 honest about what works and what doesn't yet.
@@ -149,7 +149,7 @@ One live picture fusing every air, water and ground sensor, with signed detectio
 
 ## Testbeds Shaped by DND Projects
 
-National Defence publishes what its projects must deliver. I take six of those descriptions and
+National Defence publishes what its projects must deliver. I take seven of those descriptions and
 build a working, open-source version at lab scale, and publish what it does, what testing found and
 what is not built yet. Independent research: not affiliated with or submitted to DND or the CAF.
 
@@ -202,6 +202,18 @@ events with no false fault alerts.
 conjunctions on identical inputs, uncertainty measured against operator orbits, and a watch over
 Canada's GEO satellites.
 (<a href="https://tyfsadik.org/work/defence/surveillance-of-space">page</a>)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/TYFSADIK/netc2-isac-testbed"><img src="https://raw.githubusercontent.com/TYFSADIK/netc2-isac-testbed/main/docs/img/commander-db.png" alt="Net C2 ISAC testbed: the commander's view during a database outage" /></a>
+<b><a href="https://github.com/TYFSADIK/netc2-isac-testbed">Net C2 ISAC: IT Service Health to Mission Impact</a></b><br>
+Real transactions probed at two sites, a service model from mission capabilities to components, and
+site-aware root-cause inference: 36 of 36 injected faults caught with the right cause named first,
+and no false alarms in a fault-free run.
+(<a href="https://tyfsadik.org/work/defence/network-c2-situational-awareness">page</a>)
+</td>
+<td width="50%" valign="top">
 </td>
 </tr>
 </table>
