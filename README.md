@@ -24,7 +24,8 @@
 I'm **Taki Sadik**. I build things to understand how they break: open-source defence hardware built
 against real Canadian requirements, working testbeds shaped by eight DND projects, a zero-trust homelab, a bare-metal Kubernetes cluster, a language
 model trained from scratch, and tools people use every day, like a free beauty and camera-effects
-plugin for OBS on Windows, macOS and Linux. Every project is open, documented and
+plugin for OBS on Windows, macOS and Linux, and a one-command macOS-like desktop for Linux and
+Windows. Every project is open, documented and
 honest about what works and what doesn't yet.
 
 > *I don't fully trust a system until I've tried to break it myself.*
@@ -54,6 +55,22 @@ makeup with eyeshadow, eyeliner, eyebrows and eye colour, face shaping (jaw, chi
 Windows, macOS and Linux, in OBS 30 to 33, tested inside a real OBS on every platform.
 
 `C` `GPU shaders` `MediaPipe` `ONNX Runtime` `Apple Vision` `Direct3D 11` `Metal`
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<a href="https://github.com/TYFSADIK/macstyle"><img src="https://raw.githubusercontent.com/TYFSADIK/macstyle/main/docs/screenshots/desktop.jpg" alt="macstyle: the same desktop in light and dark, with the app's menus in the top bar and the dock" /></a>
+
+**[macstyle](https://github.com/TYFSADIK/macstyle)**
+
+A macOS-like desktop for Fedora, Ubuntu, Debian and Windows in one command: a dock that magnifies,
+the app's menus in the top bar, window buttons on the left, Quick Look, and a Dark Style that switches
+theme, icons, dock, terminal and wallpaper together. Any GNOME from 43 to 51, every change saved and
+undone by one command. CI installs it on six Linux versions and Windows, checks every extension runs
+in GNOME Shell, and checks the uninstall brings every setting back.
+
+`Bash` `Python` `PowerShell` `GNOME Shell` `WhiteSur` `systemd` `GitHub Actions`
 
 </td>
 </tr>
@@ -268,6 +285,7 @@ vLLM reads event types right 92.4% of the time against 64.8% for keyword rules.
 | Project | What it is | Stack |
 | --- | --- | --- |
 | [Polish for OBS](https://github.com/TYFSADIK/obs-polish) | Beauty and camera-effects plugin for OBS on Windows, macOS and Linux: skin smoothing, foundation, makeup including eye makeup, face shaping, looks, background blur and stickers ([page](https://tyfsadik.org/work/applications/obs-polish)) | C, ONNX Runtime, MediaPipe, GPU shaders |
+| [macstyle](https://github.com/TYFSADIK/macstyle) | macOS-like desktop for Fedora, Ubuntu, Debian and Windows in one command, fully reversible: magnifying dock, top-bar app menus, Quick Look, Dark Style that switches everything ([page](https://tyfsadik.org/work/applications/macstyle)) | Bash, Python, PowerShell, GNOME Shell |
 | [GateArch](https://github.com/TYFSADIK/gatearch) | Student portal and course-management system with full CRUD and authentication | PHP, MySQL |
 | [TaxGlobe](https://github.com/TYFSADIK/taxglobe) | Multi-jurisdiction tax calculator with real-time federal and provincial breakdowns | JavaScript |
 | [Wonder Learning](https://github.com/TYFSADIK/wonder-learning) | E-learning platform with course listings and embedded video | JavaScript |
