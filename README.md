@@ -64,13 +64,14 @@ Windows, macOS and Linux, in OBS 30 to 33, tested inside a real OBS on every pla
 
 **[macstyle](https://github.com/TYFSADIK/macstyle)**
 
-A macOS-like desktop for Fedora, Ubuntu, Debian and Windows in one command: a dock that magnifies,
-the app's menus in the top bar, window buttons on the left, Quick Look, and a Dark Style that switches
-theme, icons, dock, terminal and wallpaper together. Any GNOME from 43 to 51, every change saved and
-undone by one command. CI installs it on six Linux versions and Windows, checks every extension runs
-in GNOME Shell, and checks the uninstall brings every setting back.
+A macOS-like desktop for Fedora, Ubuntu and Debian (GNOME or KDE Plasma) and Windows in one command:
+a dock, the app's menus in the top bar, window buttons on the left, Quick Look, and a Dark Style that
+switches theme, icons, dock, terminal and wallpaper together. Any GNOME from 43 to 51 or KDE Plasma 6;
+on Windows, macOS icons and Mac shortcuts too. Every change saved and undone by one command. CI
+installs it on six GNOME and four KDE Plasma systems and on Windows, checks the result in a headless
+GNOME Shell or Plasma, and checks the uninstall brings every setting back.
 
-`Bash` `Python` `PowerShell` `GNOME Shell` `WhiteSur` `systemd` `GitHub Actions`
+`Bash` `Python` `PowerShell` `GNOME Shell` `KDE Plasma` `WhiteSur` `systemd` `GitHub Actions`
 
 </td>
 </tr>
@@ -285,7 +286,7 @@ vLLM reads event types right 92.4% of the time against 64.8% for keyword rules.
 | Project | What it is | Stack |
 | --- | --- | --- |
 | [Polish for OBS](https://github.com/TYFSADIK/obs-polish) | Beauty and camera-effects plugin for OBS on Windows, macOS and Linux: skin smoothing, foundation, makeup including eye makeup, face shaping, looks, background blur and stickers ([page](https://tyfsadik.org/work/applications/obs-polish)) | C, ONNX Runtime, MediaPipe, GPU shaders |
-| [macstyle](https://github.com/TYFSADIK/macstyle) | macOS-like desktop for Fedora, Ubuntu, Debian and Windows in one command, fully reversible: magnifying dock, top-bar app menus, Quick Look, Dark Style that switches everything ([page](https://tyfsadik.org/work/applications/macstyle)) | Bash, Python, PowerShell, GNOME Shell |
+| [macstyle](https://github.com/TYFSADIK/macstyle) | macOS-like desktop for Fedora, Ubuntu and Debian (GNOME or KDE Plasma) and Windows in one command, fully reversible: magnifying dock, top-bar app menus, Quick Look, Dark Style that switches everything ([page](https://tyfsadik.org/work/applications/macstyle)) | Bash, Python, PowerShell, GNOME Shell, KDE Plasma |
 | [GateArch](https://github.com/TYFSADIK/gatearch) | Student portal and course-management system with full CRUD and authentication | PHP, MySQL |
 | [TaxGlobe](https://github.com/TYFSADIK/taxglobe) | Multi-jurisdiction tax calculator with real-time federal and provincial breakdowns | JavaScript |
 | [Wonder Learning](https://github.com/TYFSADIK/wonder-learning) | E-learning platform with course listings and embedded video | JavaScript |
